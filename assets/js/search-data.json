@@ -813,7 +813,7 @@
   },"116": {
     "doc": "AddTag",
     "title": "AddTag(Param1)",
-    "content": "- 테이블에 태그를 추가합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"TagInfoList\" : [ { \"Tag\" : \"태그1\", \"Type\" : \"데이터 타입(string, int, double)\", \"Description\" : \"태그 설명\", \"IOType\" : \"디바이스 Input/Output 타입\", \"Value\" : \"초기값\" }, { \"Tag\" : \"태그2\", \"Type\" : \"데이터 타입(string, int, double)\", \"Description\" : \"태그 설명\", \"IOType\" : \"디바이스 Input/Output 타입\", \"Value\" : \"초기값\" } ] } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/deivce/AddTag ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TagInfoList\" : [ { \"Tag\" : \"Tag1\", \"Type\" : \"int\", \"Description\" : \"Description1\", \"IOType\" : \"output\", \"Value\" : \"30\" }, { \"Tag\" : \"Tag2\", \"Type\" : \"double\", \"Description\" : \"Description2\", \"IOType\" : \"input\" } ] } ``` . ",
+    "content": "- 테이블에 태그를 추가합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"TagInfoList\" : [ { \"Tag\" : \"태그1\", \"Type\" : \"데이터 타입(string, int, double)\", \"Description\" : \"태그 설명\", \"IOType\" : \"디바이스 Input/Output 타입\", \"Value\" : \"초기값\" }, { \"Tag\" : \"태그2\", \"Type\" : \"데이터 타입(string, int, double)\", \"Description\" : \"태그 설명\", \"IOType\" : \"디바이스 Input/Output 타입\", \"Value\" : \"초기값\" } ] } . Return (반환값) . - 데이터 Tag의 정보 . { \"Result\" : \"OK\", \"Msg\" : \"\" } . Remark (주의사항) . - . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/deivce/AddTag . { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TagInfoList\" : [ { \"Tag\" : \"Tag1\", \"Type\" : \"int\", \"Description\" : \"Description1\", \"IOType\" : \"output\", \"Value\" : \"30\" }, { \"Tag\" : \"Tag2\", \"Type\" : \"double\", \"Description\" : \"Description2\", \"IOType\" : \"input\" } ] } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/AddTag/#addtagparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/AddTag/#addtagparam1"
@@ -1051,7 +1051,7 @@
   },"150": {
     "doc": "CreateTable",
     "title": "CreateTable(Param1)",
-    "content": "- Table 생성을 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"Id\" : \"SystemID\", \"Table\" : \"테이블명\", \"Access\" : \"접근권한(Public, Private)\", \"AcquisitionType\" : \"데이터 취득 방식(Master, Slave)\", \"DeviceIP\" : \"디바이스의 IP\", \"Interval\" : \"데이터 취득 간격(ms)\", \"GetUrl\" : \"데이터 취득 url\", \"SetUrl\" : \"디바이스에 값 할당을 위한 url\", \"DBType\" : \"사용할 DB 종류(Druid)\", \"TagInfoList\" : [ { \"Tag\" : \"태그명1\", \"Type\" : \"태그 데이터 타입(string, double, int)\", \"Description\" : \"태그 설명\", \"IOType\" : \"IoT 태그의 input, output 종류\", \"Value\" : \"초기값\" }, { \"Tag\" : \"태그명2\", \"Type\" : \"태그 데이터 타입(string, double, int)\", \"Description\" : \"태그 설명\", \"IOType\" : \"IoT 태그의 input, output 종류\", \"Value\" : \"초기값\" } ] } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . Acquisition Type Master : DB가 Device에 접근 할 수 있는 상태 Slave : DB가 Device에 접근 할 수 없는 상태 - Master일 때에는 Interval 주기마다 GetUrl 을 통해 데이터를 취득, SetUrl을 통해 제어 - Slave일 때에는 Device가 직접 DB로 값을 적재하고 제어 Interval은 ms(밀리세컨드)단위로, 1000 = 1초 이다. 너무 작은 단위의 수를 입력하면 원활한 적재가 이루어지지 않을 수 있다. Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/CreateTable ```Json { \"ID\": \"123\", \"Table\": \"Table1\", \"DBType\": \"Druid\", \"Access\": \"Public\", \"AcquisitionType\": \"Master\", \"DeviceIP\": \"2000\", \"GetUrl\":\"https://192.168.0.224:5000/GetDeviceValues\", \"SetUrl\": \"https://192.168.0.224:5000/SetDeviceValues\", \"TagInfoList\": [ { \"Type\": \"int\", \"Description\": \"LED\", \"Tag\": \"LED_1\", \"IOType\": \"Output\", \"Value\" : \"0\" }, { \"Type\": \"double\", \"Description\": \"temp\", \"Tag\": \"Temp_2\", \"IOType\": \"Input\", \"Value\" : \"36.5\" } ] } ``` . ",
+    "content": "- Table 생성을 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"Id\" : \"SystemID\", \"Table\" : \"테이블명\", \"Access\" : \"접근권한(Public, Private)\", \"AcquisitionType\" : \"데이터 취득 방식(Master, Slave)\", \"DeviceIP\" : \"디바이스의 IP\", \"Interval\" : \"데이터 취득 간격(ms)\", \"GetUrl\" : \"데이터 취득 url\", \"SetUrl\" : \"디바이스에 값 할당을 위한 url\", \"DBType\" : \"사용할 DB 종류(Druid)\", \"TagInfoList\" : [ { \"Tag\" : \"태그명1\", \"Type\" : \"태그 데이터 타입(string, double, int)\", \"Description\" : \"태그 설명\", \"IOType\" : \"IoT 태그의 input, output 종류\", \"Value\" : \"초기값\" }, { \"Tag\" : \"태그명2\", \"Type\" : \"태그 데이터 타입(string, double, int)\", \"Description\" : \"태그 설명\", \"IOType\" : \"IoT 태그의 input, output 종류\", \"Value\" : \"초기값\" } ] } . Return (반환값) . - 데이터 Tag의 정보 . { \"Result\" : \"OK\", \"Msg\" : \"\" } . Remark (주의사항) . Acquisition Type Master : DB가 Device에 접근 할 수 있는 상태 Slave : DB가 Device에 접근 할 수 없는 상태 - Master일 때에는 Interval 주기마다 GetUrl 을 통해 데이터를 취득, SetUrl을 통해 제어 - Slave일 때에는 Device가 직접 DB로 값을 적재하고 제어 Interval은 ms(밀리세컨드)단위로, 1000 = 1초 이다. 너무 작은 단위의 수를 입력하면 원활한 적재가 이루어지지 않을 수 있다. Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/CreateTable . { \"ID\": \"123\", \"Table\": \"Table1\", \"DBType\": \"Druid\", \"Access\": \"Public\", \"AcquisitionType\": \"Master\", \"DeviceIP\": \"2000\", \"GetUrl\":\"https://192.168.0.224:5000/GetDeviceValues\", \"SetUrl\": \"https://192.168.0.224:5000/SetDeviceValues\", \"TagInfoList\": [ { \"Type\": \"int\", \"Description\": \"LED\", \"Tag\": \"LED_1\", \"IOType\": \"Output\", \"Value\" : \"0\" }, { \"Type\": \"double\", \"Description\": \"temp\", \"Tag\": \"Temp_2\", \"IOType\": \"Input\", \"Value\" : \"36.5\" } ] } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/CreateTable/#createtableparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/CreateTable/#createtableparam1"
@@ -1156,7 +1156,7 @@
   },"165": {
     "doc": "DeleteTable",
     "title": "CreateTable(Param1)",
-    "content": "- 테이블 삭제를 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\" } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/DeleteTable ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" . } ``` . ",
+    "content": "- 테이블 삭제를 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\" } . Return (반환값) . - 데이터 Tag의 정보 ```json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/DeleteTable ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" . } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTable/#createtableparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTable/#createtableparam1"
@@ -1177,7 +1177,7 @@
   },"168": {
     "doc": "DeleteTag",
     "title": "DeleteTag(Param1)",
-    "content": "- 테이블의 태그를 삭제합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"TagList\" : [ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/DeleteTag ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TagList\" : [ \"LED_1\", \"Temp_2\" ] } ``` . ",
+    "content": "- 테이블의 태그를 삭제합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"TagList\" : [ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 ```json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/DeleteTag ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TagList\" : [ \"LED_1\", \"Temp_2\" ] } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTag/#deletetagparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTag/#deletetagparam1"
@@ -1198,7 +1198,7 @@
   },"171": {
     "doc": "ExternalFunctionJS",
     "title": "ExternalFunctionJS(Param1)",
-    "content": "- 루아 스크립트함수에서 외부의 JS함수를 호출하는 함수입니다. - enuSpaceInterface.js 파일의 Call_ExternalFunctionJS(strParam)함수를 호출합니다. Parameter (인자) . - Param1 : 사용자 정의 파라미터 입력 . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() value = ExternalFunctionJS(strParam) end . function Call_ExternalFunctionJS(strParam) {     var URL = \"\";               // 사용자 서버주소를 지정     var data = \"\";              // 사용자 파라미터 지정     var RequestURL = UTF8ToString(URL);     var RequestData = UTF8ToString(Data);     var xmlHttp = new XMLHttpRequest(); xmlHttp.onreadystatechange=function()     { if (xmlHttp.readyState==4 &amp;&amp; xmlHttp.status==200) {               var msg = xmlHttp.responseText;         // msg 내용         // {\"TagName\":\"Test2_Tag0\",\"Value\":\"0.265387\"},{\"TagName\":\"Test2_Tag1\",\"Value\":\"0.340363\"} User_SetGlobalValues(msg); }     };     xmlHttp.open(\"POST\",RequestURL,true);   xmlHttp.setRequestHeader(\"Content-Type\",\"text/plain\");     xmlHttp.send(RequestData); } . ",
+    "content": "- 루아 스크립트함수에서 외부의 JS함수를 호출하는 함수입니다. - enuSpaceInterface.js 파일의 Call_ExternalFunctionJS(strParam)함수를 호출합니다. Parameter (인자) . - Param1 : 사용자 정의 파라미터 입력 . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() value = ExternalFunctionJS(strParam) end . function Call_ExternalFunctionJS(strParam) { var URL = \"\";               // 사용자 서버주소를 지정 var data = \"\";              // 사용자 파라미터 지정 var RequestURL = UTF8ToString(URL); var RequestData = UTF8ToString(Data); var xmlHttp = new XMLHttpRequest(); xmlHttp.onreadystatechange=function()     { if (xmlHttp.readyState==4 &amp;&amp; xmlHttp.status==200) {               var msg = xmlHttp.responseText;         // msg 내용         // {\"TagName\":\"Test2_Tag0\",\"Value\":\"0.265387\"},{\"TagName\":\"Test2_Tag1\",\"Value\":\"0.340363\"} User_SetGlobalValues(msg); }     };     xmlHttp.open(\"POST\",RequestURL,true); xmlHttp.setRequestHeader(\"Content-Type\",\"text/plain\");     xmlHttp.send(RequestData); } . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/#externalfunctionjsparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/#externalfunctionjsparam1"
@@ -1219,7 +1219,7 @@
   },"174": {
     "doc": "GetAllTagFromTable",
     "title": "GetAllTagFromTable(Param1)",
-    "content": "- 테이블에 속한 모든 태그의 리스트를 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\" } . Return (반환값) . - 데이터 Tag의 정보 ```Json [ { \"Table\": \"테이블명\", \"Tag\": \"태그1\", \"Description\": \"태그1 설명\", \"Value\": null, \"Type\": \"string\", \"IOType\": \"input\", \"VariableName\": \"태그1\" }, { \"Table\": \"테이블명\", \"Tag\": \"태그2\", \"Description\": \"태그2 설명\", \"Value\": \"10.0\", \"Type\": \"double\", \"IOType\": \"input\", \"VariableName\": \"태그2\" } ] ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/GetAllTagFromTable ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" } ``` . ",
+    "content": "- 테이블에 속한 모든 태그의 리스트를 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\" } . Return (반환값) . - 데이터 Tag의 정보 ```json [ { \"Table\": \"테이블명\", \"Tag\": \"태그1\", \"Description\": \"태그1 설명\", \"Value\": null, \"Type\": \"string\", \"IOType\": \"input\", \"VariableName\": \"태그1\" }, { \"Table\": \"테이블명\", \"Tag\": \"태그2\", \"Description\": \"태그2 설명\", \"Value\": \"10.0\", \"Type\": \"double\", \"IOType\": \"input\", \"VariableName\": \"태그2\" } ] ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/GetAllTagFromTable ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetAllTagFromTable/#getalltagfromtableparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetAllTagFromTable/#getalltagfromtableparam1"
@@ -1345,7 +1345,7 @@
   },"192": {
     "doc": "GetSelectedTag",
     "title": "GetSelectedTag(Param1)",
-    "content": "- 원하는 태그의 정보를 반환합니다 . Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Tags\" : [ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 ```Json [ { \"table\": \"테이블1\", \"tag\": \"태그1\", \"description\": \"태그1 설명\", \"value\": \"10.0\", \"type\": \"string\", \"variableName\": \"태그1\" }, { \"table\": \"테이블1\", \"tag\": \"태그2\", \"description\": \"태그2 설명\", \"value\": \"10.0\", \"type\": \"string\", \"variableName\": \"태그2\" } ] ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/GetSelectedTag ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"Tags\" : [ \"LED_1\", \"Temp_2\" ] } ``` . ",
+    "content": "- 원하는 태그의 정보를 반환합니다 . Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Tags\" : [ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 ```json [ { \"table\": \"테이블1\", \"tag\": \"태그1\", \"description\": \"태그1 설명\", \"value\": \"10.0\", \"type\": \"string\", \"variableName\": \"태그1\" }, { \"table\": \"테이블1\", \"tag\": \"태그2\", \"description\": \"태그2 설명\", \"value\": \"10.0\", \"type\": \"string\", \"variableName\": \"태그2\" } ] ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/GetSelectedTag ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"Tags\" : [ \"LED_1\", \"Temp_2\" ] } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetSelectedTag/#getselectedtagparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetSelectedTag/#getselectedtagparam1"
@@ -1366,7 +1366,7 @@
   },"195": {
     "doc": "GetTableInfo",
     "title": "GetTableInfo(Param1)",
-    "content": "- Param1의 API KEY와 상응하는 테이블 1개의 정보를 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\" } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Data\": [ { \"Access\": \"Public\", \"AcquisitionType\": \"Slave\", \"Activation\": \"Deactivated\", \"DBType\": \"Druid\", \"DeviceIP\": \"192.168.0.1\", \"GetUrl\": \"https://192.168.0.1:5000/GetDeviceValues\", \"Id\": \"Table_ID\", \"Interval\": 1000, \"SetUrl\": \"https://192.168.0.1:5000/SetDeviceValues\", \"Table\": \"ardu_table\", \"TagInfoList\": [] } ], \"Msg\": \"\", \"Result\": \"Ok\" } ``` . Remark (주의사항) . - . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/Device/GetTableInfo ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" } ``` . ",
+    "content": "- Param1의 API KEY와 상응하는 테이블 1개의 정보를 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\" } . Return (반환값) . - 데이터 Tag의 정보 ```json { \"Data\": [ { \"Access\": \"Public\", \"AcquisitionType\": \"Slave\", \"Activation\": \"Deactivated\", \"DBType\": \"Druid\", \"DeviceIP\": \"192.168.0.1\", \"GetUrl\": \"https://192.168.0.1:5000/GetDeviceValues\", \"Id\": \"Table_ID\", \"Interval\": 1000, \"SetUrl\": \"https://192.168.0.1:5000/SetDeviceValues\", \"Table\": \"ardu_table\", \"TagInfoList\": [] } ], \"Msg\": \"\", \"Result\": \"Ok\" } ``` . Remark (주의사항) . - . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/Device/GetTableInfo ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTableInfo/#gettableinfoparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTableInfo/#gettableinfoparam1"
@@ -1421,46 +1421,46 @@
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValue/"
   },"203": {
     "doc": "GetTagValues",
-    "title": "Lua API",
-    "content": " ",
-    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api",
-    
-    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api"
-  },"204": {
-    "doc": "GetTagValues",
-    "title": "GetTagValues(Param1, Param2)",
-    "content": "- DAQ(데이터취득)시스템으로부터 데이터를 요청하는 함수입니다. Parameter (인자) . - Param1 : DB Table Name - Param2 : Lua Array . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"Bla ~bla~\", \"Data\": { \"Table\" : \"테이블명1\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } { \"Table\" : \"테이블명2\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } } ``` . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() local data = {\"tag1\", \"tag2\", \"tag3\"} ID_TEXT.text = GetTagValues(\"table\",data) end . ",
-    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1-param2",
-    
-    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1-param2"
-  },"205": {
-    "doc": "GetTagValues",
-    "title": "GetTagValues",
-    "content": " ",
-    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/",
-    
-    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
-  },"206": {
-    "doc": "GetTagValues",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#server-api"
-  },"207": {
+  },"204": {
     "doc": "GetTagValues",
     "title": "GetTagValues(Param1)",
-    "content": "- 태그의 가장 최신 값을 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Tags\":[ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Msg\": \"\", \"Data\": [ { \"Data\": [ { \"Tag\": \"태그1\", \"Value\": \"11.0\", \"TimeStamp\": \"2023-05-16T03:32:54.419\", \"Result\": \"Ok\" } ], \"Table\": \"테이블1\" }, { \"Data\": [ { \"Tag\": \"태그2\", \"Value\": \"10.0\", \"TimeStamp\": \"2023-05-16T03:32:54.419\", \"Result\": \"Ok\" } ], \"Table\": \"테이블2\" } ], \"Result\": \"Ok\" } ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/Device/GetTagValues ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"Tags\":[ \"LED_1\", \"Temp_2\" ] } ``` . ",
+    "content": "- 태그의 가장 최신 값을 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Tags\":[ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 ```json { \"Msg\": \"\", \"Data\": [ { \"Data\": [ { \"Tag\": \"태그1\", \"Value\": \"11.0\", \"TimeStamp\": \"2023-05-16T03:32:54.419\", \"Result\": \"Ok\" } ], \"Table\": \"테이블1\" }, { \"Data\": [ { \"Tag\": \"태그2\", \"Value\": \"10.0\", \"TimeStamp\": \"2023-05-16T03:32:54.419\", \"Result\": \"Ok\" } ], \"Table\": \"테이블2\" } ], \"Result\": \"Ok\" } ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/Device/GetTagValues ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"Tags\":[ \"LED_1\", \"Temp_2\" ] } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1"
-  },"208": {
+  },"205": {
     "doc": "GetTagValues",
     "title": "GetTagValues",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
+  },"206": {
+    "doc": "GetTagValues",
+    "title": "Lua API",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api"
+  },"207": {
+    "doc": "GetTagValues",
+    "title": "GetTagValues(Param1, Param2)",
+    "content": "- DAQ(데이터취득)시스템으로부터 데이터를 요청하는 함수입니다. Parameter (인자) . - Param1 : DB Table Name - Param2 : Lua Array . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"Bla ~bla~\", \"Data\": { \"Table\" : \"테이블명1\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } { \"Table\" : \"테이블명2\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } } ``` . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() local data = {\"tag1\", \"tag2\", \"tag3\"} ID_TEXT.text = GetTagValues(\"table\",data) end . ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1-param2",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1-param2"
+  },"208": {
+    "doc": "GetTagValues",
+    "title": "GetTagValues",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
   },"209": {
     "doc": "GetTagValuesHistory",
     "title": "Server API",
@@ -1471,7 +1471,7 @@
   },"210": {
     "doc": "GetTagValuesHistory",
     "title": "GetTagValuesHistory(Param1)",
-    "content": "- 특정 태그의 데이터를 시작 시간부터 끝 시간까지 일정 간격으로 나누어 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Tag\" : \"태그명\", \"StartTime\" : \"2023-05-01 00:00:00\", \"EndTime\" : \"2023-05-30 00:00:00\", \"Duration\" : 5000 } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Msg\": \"\", \"Data\": [ { \"Value\": \"10.0\", \"TimeStamp\": \"2023-05-15T18:31:35\", \"Result\": \"Ok\" }, { \"Value\": \"11.0\", \"TimeStamp\": \"2023-05-15T18:31:40\", \"Result\": \"Ok\" }, { \"TimeStamp\": \"2023-05-15T18:31:45\", \"Result\": \"Fail\" } ] } ``` . Remark (주의사항) . - Interval과 SetUrl은 AcquisitionType이 Master일 때만 유효 . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/GetTagValuesHistory ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"Tag\" : \"LED_1\", \"StartTime\" : \"2023-07-01 00:00:00\", \"EndTime\" : \"2023-07-03 00:00:00\", \"Duration\" : 5000 } ``` . ",
+    "content": "- 특정 태그의 데이터를 시작 시간부터 끝 시간까지 일정 간격으로 나누어 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Tag\" : \"태그명\", \"StartTime\" : \"2023-05-01 00:00:00\", \"EndTime\" : \"2023-05-30 00:00:00\", \"Duration\" : 5000 } . Return (반환값) . - 데이터 Tag의 정보 ```json { \"Msg\": \"\", \"Data\": [ { \"Value\": \"10.0\", \"TimeStamp\": \"2023-05-15T18:31:35\", \"Result\": \"Ok\" }, { \"Value\": \"11.0\", \"TimeStamp\": \"2023-05-15T18:31:40\", \"Result\": \"Ok\" }, { \"TimeStamp\": \"2023-05-15T18:31:45\", \"Result\": \"Fail\" } ] } ``` . Remark (주의사항) . - Interval과 SetUrl은 AcquisitionType이 Master일 때만 유효 . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/GetTagValuesHistory ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"Tag\" : \"LED_1\", \"StartTime\" : \"2023-07-01 00:00:00\", \"EndTime\" : \"2023-07-03 00:00:00\", \"Duration\" : 5000 } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValuesHistory/#gettagvalueshistoryparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValuesHistory/#gettagvalueshistoryparam1"
@@ -1744,7 +1744,7 @@
   },"249": {
     "doc": "SetScheduleActivation",
     "title": "SetScheduleActivation(Param1)",
-    "content": "- 테이블의 AcquisitionType이 Master일 경우 데이터 적재 스케쥴링 활성화/비활성화 선택 . Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\" : \"APIKEY\", \"ACTIVATION\":\"TRUE/FALSE\" } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - True 설정 시 DB 적재 / False 설정 시 DB 미적재 . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/Device/SetScheduleActivation ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"ACTIVATION\":\"TRUE\" } ``` . ",
+    "content": "- 테이블의 AcquisitionType이 Master일 경우 데이터 적재 스케쥴링 활성화/비활성화 선택 . Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\" : \"APIKEY\", \"ACTIVATION\":\"TRUE/FALSE\" } . Return (반환값) . - 데이터 Tag의 정보 ```json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - True 설정 시 DB 적재 / False 설정 시 DB 미적재 . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/Device/SetScheduleActivation ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"ACTIVATION\":\"TRUE\" } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetScheduleActivation/#setscheduleactivationparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetScheduleActivation/#setscheduleactivationparam1"
@@ -1807,7 +1807,7 @@
   },"258": {
     "doc": "SetTagValues",
     "title": "SetTagValues(Param1)",
-    "content": "- 현재 시간으로 태그에 값을 추가합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"TagsAndValue\" :[ { \"Tag\" : \"태그1\", \"Value\" : \"10.0\" }, { \"Tag\" : \"태그2\", \"Value\" : \"12\" } ] } . Return (반환값) . - 성공 ```Json { \"Msg\":\"Tag values are set to druid\", \"Result\":\"Ok\" } ``` - MySQL Query 실패 ```Json { \"Msg\":\"MySQL,CannotConnectToDatabase\", \"Result\":\"Fail\", \"Data\":\"ExceptionMessage\" } { \"Msg\":\"MySQL, ... \", \"Result\":\"Fail\", \"Data\":\"ExceptionMessage\" } ``` - 데이터 조작 실패 ```Json { \"Msg\":\"DBHandle,CannotFindTable\", \"Result\":\"Fail\" } { \"Msg\":\"DBHandle, ... \", \"Result\":\"Fail\" } ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/Device/SetTagValues ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TagsAndValue\":[ { \"TAG\":\"LED_1\", \"VALUE\":\"1\" }, { \"TAG\":\"TEMP_1\", \"VALUE\":\"40.8\" } ] } ``` . ",
+    "content": "- 현재 시간으로 태그에 값을 추가합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"TagsAndValue\" :[ { \"Tag\" : \"태그1\", \"Value\" : \"10.0\" }, { \"Tag\" : \"태그2\", \"Value\" : \"12\" } ] } . Return (반환값) . - 성공 ```json { \"Msg\":\"Tag values are set to druid\", \"Result\":\"Ok\" } ``` - MySQL Query 실패 ```json { \"Msg\":\"MySQL,CannotConnectToDatabase\", \"Result\":\"Fail\", \"Data\":\"ExceptionMessage\" } { \"Msg\":\"MySQL, ... \", \"Result\":\"Fail\", \"Data\":\"ExceptionMessage\" } ``` - 데이터 조작 실패 ```json { \"Msg\":\"DBHandle,CannotFindTable\", \"Result\":\"Fail\" } { \"Msg\":\"DBHandle, ... \", \"Result\":\"Fail\" } ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/Device/SetTagValues ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TagsAndValue\":[ { \"TAG\":\"LED_1\", \"VALUE\":\"1\" }, { \"TAG\":\"TEMP_1\", \"VALUE\":\"40.8\" } ] } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#settagvaluesparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#settagvaluesparam1"
@@ -1954,7 +1954,7 @@
   },"279": {
     "doc": "UpdateTable",
     "title": "UpdateTable(Param1)",
-    "content": "- 테이블의 여러 속성 값을 변경합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Table\" : \"변경 전 테이블명\", \"Data\" : { \"Table\": \"변경할 테이블명\", \"DBType\": \"변경할 DBType\", \"Access\": \"변경할 ACCESS\", \"AcquisitionType\": \"변경할 AcquisitionType\", \"Interval\": \"변경할 Acquisition interval\", \"DeviceIP\": \"변경할 DeviceIP\", \"SetUrl\": \"변경할 SetUrl\", \"GetUrl\": \"변경할 GetUrl\" } } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - AcquisitionType을 Slave에서 Master로 변경 시 Interval과 GetUrl이 필수로 있어야 합니다. Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/UpdateTable ```Json { \"APIKEY\":\"APIKEY\", \"Table\" : \"Table1\", \"Data\" : { \"Table\": \"Bright_Table\", \"DBType\": \"Druid\", \"Access\": \"Private\", \"AcquisitionType\": \"Master\", \"Interval\": 5000, \"DeviceIP\": \"192.168.0.1\", \"SetUrl\": \"\", \"GetUrl\": \"https://192.168.0.1/GetData\" } } ``` . ",
+    "content": "- 테이블의 여러 속성 값을 변경합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Table\" : \"변경 전 테이블명\", \"Data\" : { \"Table\": \"변경할 테이블명\", \"DBType\": \"변경할 DBType\", \"Access\": \"변경할 ACCESS\", \"AcquisitionType\": \"변경할 AcquisitionType\", \"Interval\": \"변경할 Acquisition interval\", \"DeviceIP\": \"변경할 DeviceIP\", \"SetUrl\": \"변경할 SetUrl\", \"GetUrl\": \"변경할 GetUrl\" } } . Return (반환값) . - 데이터 Tag의 정보 ```json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - AcquisitionType을 Slave에서 Master로 변경 시 Interval과 GetUrl이 필수로 있어야 합니다. Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/UpdateTable ```json { \"APIKEY\":\"APIKEY\", \"Table\" : \"Table1\", \"Data\" : { \"Table\": \"Bright_Table\", \"DBType\": \"Druid\", \"Access\": \"Private\", \"AcquisitionType\": \"Master\", \"Interval\": 5000, \"DeviceIP\": \"192.168.0.1\", \"SetUrl\": \"\", \"GetUrl\": \"https://192.168.0.1/GetData\" } } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTable/#updatetableparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTable/#updatetableparam1"
@@ -1975,7 +1975,7 @@
   },"282": {
     "doc": "UpdateTag",
     "title": "UpdateTag(Param1)",
-    "content": "- 테이블의 태그 정보를 변경합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Tag\" : \"변경 전 태그명\", \"Data\" : { \"tag\" : \"변경할 태그명\", \"type\": \"변경할 타입\", \"description\": \"변경할 설명\", \"IOType\": \"변경할 IOType\" } } . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - Tag, Description, Type, VariableName, IOType에 해당하는 Attribute를 지원합니다. Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/UpdateTag ```Json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"Tag\" : \"LED_1\", \"Data\" : { \"tag\" : \"Bright_Pin_1\", \"type\": \"double\", \"description\": \"bright_pin\", \"IOType\": \"Input\" } } ``` . ",
+    "content": "- 테이블의 태그 정보를 변경합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"APIKEY\":\"APIKEY\", \"Tag\" : \"변경 전 태그명\", \"Data\" : { \"tag\" : \"변경할 태그명\", \"type\": \"변경할 타입\", \"description\": \"변경할 설명\", \"IOType\": \"변경할 IOType\" } } . Return (반환값) . - 데이터 Tag의 정보 ```json { \"Result\" : \"OK\", \"Msg\" : \"\" } ``` . Remark (주의사항) . - Tag, Description, Type, VariableName, IOType에 해당하는 Attribute를 지원합니다. Example (API 사용 예시) . - HTTP/POST https://127.0.0.1:3000/api/DAQ/device/UpdateTag ```json { \"APIKEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"Tag\" : \"LED_1\", \"Data\" : { \"tag\" : \"Bright_Pin_1\", \"type\": \"double\", \"description\": \"bright_pin\", \"IOType\": \"Input\" } } ``` . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/#updatetagparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/#updatetagparam1"
@@ -1987,34 +1987,62 @@
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/"
   },"284": {
+    "doc": "gradient",
+    "title": "Graphics (Gradient)",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#graphics-gradient",
+    
+    "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#graphics-gradient"
+  },"285": {
+    "doc": "gradient",
+    "title": "gradient",
+    "content": "객체에 gradient 색상을 제공합니다. 현재 gradient 색상이 지원되는 객체는 rect, circle, ellipse, path, polygon 총 5가지 객체 입니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_grad_linear.asp . gradient 색상이 지원되는 객체의 fill 속성 왼쪽의 아이콘을 클릭해서 gradient가 적용된 fill 속성을 사용할 수 있습니다. ",
+    "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/",
+    
+    "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/"
+  },"286": {
+    "doc": "gradient",
+    "title": "Linear Gradient",
+    "content": ". Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() ID_RECT.gradient.gradient_type = \"linearGradient\" ID_RECT.gradient.stop_count = 2 ID_RECT.gradient.x1 = 0 ID_RECT.gradient.y1 = 50 ID_RECT.gradient.x2 = 100 ID_RECT.gradient.y2 = 50 ID_RECT.gradient.stop1.offset = 20 ID_RECT.gradient.stop2.offset = 60 ID_RECT.gradient.stop1.stop_color = 20 ID_RECT.gradient.stop2.stop_color = 60 ID_RECT.gradient.stop1.stop_opacity = 0.8 ID_RECT.gradient.stop2.stop_opacity = 0.2 end . ",
+    "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient",
+    
+    "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient"
+  },"287": {
+    "doc": "gradient",
+    "title": "Radial Gradient",
+    "content": ". Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() ID_RECT.gradient.gradient_type = \"radialGradient\" ID_RECT.gradient.cx = 50 ID_RECT.gradient.cy = 50 ID_RECT.gradient.fx = 20 ID_RECT.gradient.fy = 20 ID_RECT.gradient.r = 50 ID_RECT.gradient.stop_count = 2 ID_RECT.gradient.stop1.offset = 20 ID_RECT.gradient.stop2.offset = 60 ID_RECT.gradient.stop1.stop_color = 20 ID_RECT.gradient.stop2.stop_color = 60 ID_RECT.gradient.stop1.stop_opacity = 0.8 ID_RECT.gradient.stop2.stop_opacity = 0.2 end . ",
+    "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#radial-gradient",
+    
+    "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#radial-gradient"
+  },"288": {
     "doc": "Home",
     "title": "enuSpaceMeta Manual",
     "content": " ",
     "url": "/enuspaceMeta_doc/#enuspacemeta-manual",
     
     "relUrl": "/#enuspacemeta-manual"
-  },"285": {
+  },"289": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/enuspaceMeta_doc/",
     
     "relUrl": "/"
-  },"286": {
+  },"290": {
     "doc": "rect_object",
     "title": "Graphics (RECT)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect_object/#graphics-rect",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect_object/#graphics-rect"
-  },"287": {
+  },"291": {
     "doc": "rect_object",
     "title": "rect",
     "content": "사각형 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_rect.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | rx | float | 객체의 x축 라운드 속성 | value | . | ry | float | 객체의 y축 라운드 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 | value 라운드 | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . gradient - true (optional) . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() width = width + 1 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect_object/#rect",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect_object/#rect"
-  },"288": {
+  },"292": {
     "doc": "rect_object",
     "title": "rect_object",
     "content": " ",
