@@ -7606,4 +7606,57 @@ blockquote.warning-title > p:last-child {
   margin-bottom: 0;
 }
 
+h1 {
+  font-weight: bold;
+}
+
+h2 > code {
+  color: #1565C0;
+  background-color: #F0F1F5 !important;
+  border: 1px solid #DEDBDE !important;
+}
+
+h3 {
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+table {
+  border-color: #BBBCBF;
+  border-collapse: collapse;
+}
+table thead tr th {
+  background-color: #E1E2E5;
+  border-bottom: 1px solid #BBBCBF;
+  border-left: 1px solid #BBBCBF;
+  text-align: center !important;
+}
+table tbody tr td {
+  border-bottom: 1px solid #E1E2E5;
+  border-left: 1px solid #E1E2E5;
+}
+table tbody tr td:nth-child(1) {
+  color: #1565C0;
+}
+table tbody tr td:nth-child(2) {
+  font-size: 1rem !important;
+  color: #E58900;
+}
+table tbody tr td code {
+  font-size: 0.9rem;
+  background-color: #F0F1F5 !important;
+  border: 1px solid #DEDBDE !important;
+}
+
+blockquote {
+  border-color: #64DD17;
+  background-color: #F0F1F5;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.highlight, pre.highlight {
+  background-color: #F0F1F5;
+}
+
 /*# sourceMappingURL=just-the-docs-default.css.map */

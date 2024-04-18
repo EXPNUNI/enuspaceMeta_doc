@@ -1,0 +1,73 @@
+<h1 id="lua-api">Lua API</h1>
+
+<h2 id="popupchartchartnametimedurationdb_tag-array">PopupChart(<code class="language-plaintext highlighter-rouge">ChartName</code>,<code class="language-plaintext highlighter-rouge">Time</code>,<code class="language-plaintext highlighter-rouge">Duration</code>,<code class="language-plaintext highlighter-rouge">DB_Tag Array</code>)</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- DAQ(데이터취득)시스템으로부터 데이터를 전달받아 실시간으로 모니터링하는 차트를 띄웁니다.
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="parameter-인자">Parameter (인자)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Name</th>
+      <th style="text-align: center">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: center">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">ChartName</code></td>
+      <td style="text-align: center">string</td>
+      <td style="text-align: left">차트 ID</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">Time</code></td>
+      <td style="text-align: center">string</td>
+      <td style="text-align: left">최초 불러올 데이터 시간</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">Duration</code></td>
+      <td style="text-align: center">int</td>
+      <td style="text-align: left">데이터 취득 주기 (millisecond 단위)</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">DB_TAG Array</code></td>
+      <td style="text-align: center">String Array, string</td>
+      <td style="text-align: left">데이터를 불러 올 DB, TAG</td>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="return-반환값">Return (반환값)</h3>
+
+<pre><code class="language-Json">
+팝업창에 차트를 가시화합니다.
+</code></pre>
+
+<h3 id="remark-주의사항">Remark (주의사항)</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ChartName</code>은 고유 차트 ID로, 중복되는 차트가 있다면 기존 차트가 사라지고 새로운 차트로 대체됩니다.</li>
+  <li>AddChartSeries 함수를 통하여 태그를 추가할 때, 해당 <code class="language-plaintext highlighter-rouge">ChartName</code>의 차트에 태그가 추가됩니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">Time</code>은 5m 은 5 minutes 으로, 최초로 5분간의 데이터를 불러온다는 의미입니다. 단위는 s, m, h(초,분,시)가 있으며 숫자 + 단위로 입력합니다. (10s, 5m, 1h …)</li>
+  <li><code class="language-plaintext highlighter-rouge">Duration</code>을 너무 작게 입력하면 거절당할 수 있습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">DB_TAG Array</code>는 ‘DB.TAG, DB.TAG2…’ 형식으로 작성합니다.
+    <h3 id="example-함수사용-예시">Example (함수사용 예시)</h3>
+  </li>
+</ul>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">function</span> <span class="nf">_onclick</span><span class="p">()</span>
+        <span class="kd">local</span> <span class="n">tag</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'TABLE.TAG1'</span><span class="p">,</span> <span class="s1">'TABLE.TAG2'</span><span class="p">}</span>
+        <span class="n">PopupChart</span><span class="p">(</span><span class="s2">"Chart_1"</span><span class="p">,</span> <span class="s2">"5m"</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
+
+        <span class="kd">local</span> <span class="n">tag2</span> <span class="o">=</span> <span class="s1">'TABLE.TAG1'</span>
+        <span class="n">PopupChart</span><span class="p">(</span><span class="s2">"Chart_2"</span><span class="p">,</span> <span class="s2">"1h"</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">tag2</span><span class="p">)</span>
+	<span class="k">end</span>
+</code></pre></div></div>
