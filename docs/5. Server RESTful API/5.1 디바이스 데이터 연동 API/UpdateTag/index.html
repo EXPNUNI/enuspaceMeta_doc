@@ -513,10 +513,14 @@
 </h3>
     
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 데이터 Tag의 정보 ```json {
-"RESULT" : "Ok",
-"MSG" : "" } ```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 데이터 Tag의 정보
 </code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"RESULT"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"MSG"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 <h3 id="remark-주의사항">
   
   
@@ -535,16 +539,20 @@
   
 </h3>
     
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- HTTP/POST https://enuspace.com/api/DAQ/device/UpdateTag ```json {
-"API_KEY":"_3qd1a3hfko5163ceb2ad174vq1u95yz3",
-"TAG" : "LED_1",
-"DATA" : {
-    "TAG" : "Bright_Pin_1",
-    "DATA_TYPE": "double",
-    "DESCRIPTION": "bright_pin",
-    "IO_TYPE": "Input"
-} } ```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- HTTP/POST https://enuspace.com/api/DAQ/device/UpdateTag
 </code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"API_KEY"</span><span class="p">:</span><span class="s2">"_3qd1a3hfko5163ceb2ad174vq1u95yz3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"TAG"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"LED_1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"DATA"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"TAG"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Bright_Pin_1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"DATA_TYPE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"double"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"DESCRIPTION"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bright_pin"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"IO_TYPE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Input"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
           
 

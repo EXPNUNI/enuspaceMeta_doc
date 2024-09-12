@@ -516,11 +516,16 @@
 </h3>
     
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 성공 ```json {
-"MSG":"Tag values are set to druid",
-"RESULT":"Ok" } ```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 성공
+</code></pre></div></div>
 
-- 데이터 조작 실패 ```json {
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"MSG"</span><span class="p">:</span><span class="s2">"Tag values are set to druid"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"RESULT"</span><span class="p">:</span><span class="s2">"Ok"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 데이터 조작 실패 ```json {
 "MSG":"DBHandle,CannotFindTable",
 "RESULT":"Fail" } {
 "MSG":"DBHandle, ... ",
@@ -544,20 +549,24 @@
   
 </h3>
     
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- HTTP/POST https://enuspace.com/api/DAQ/Device/SetTagValues ```json {
-"API_KEY":"_3qd1a3hfko5163ceb2ad174vq1u95yz3",
-"TAGS_AND_VALUE":[
-    {
-        "TAG":"LED_1",
-        "VALUE":"1"
-    },
-    {
-        "TAG":"TEMP_1",
-        "VALUE":"40.8"
-    }
-],
-"USE_VARIABLE_NAME": false } ```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- HTTP/POST https://enuspace.com/api/DAQ/Device/SetTagValues
 </code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"API_KEY"</span><span class="p">:</span><span class="s2">"_3qd1a3hfko5163ceb2ad174vq1u95yz3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"TAGS_AND_VALUE"</span><span class="p">:[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"TAG"</span><span class="p">:</span><span class="s2">"LED_1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"VALUE"</span><span class="p">:</span><span class="s2">"1"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"TAG"</span><span class="p">:</span><span class="s2">"TEMP_1"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"VALUE"</span><span class="p">:</span><span class="s2">"40.8"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"USE_VARIABLE_NAME"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
           
 

@@ -512,31 +512,35 @@
 </h3>
     
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 데이터 Tag의 정보 ```json {
-"MSG": "",
-"DATA": [
-    [
-        {
-            "TAG": "Tag1",
-            "VALUE": "10.0",
-            "TIMESTAMP": "2024-01-01T00:00:00.000Z",
-            "RESULT": "Ok"
-        },
-        {
-            "TAG": "Tag1",
-            "VALUE": "11.0",
-            "TIMESTAMP": "2024-01-02T00:00:00.000Z",
-            "RESULT": "Ok"
-        },
-        {
-            "TAG": "Tag1",
-            "TIMESTAMP": "2024-01-03T00:00:00.000Z",
-            "RESULT": "Fail"
-        }
-    ]
-],
-"RESULT": "Ok" } ```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 데이터 Tag의 정보
 </code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"MSG"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"DATA"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"TAG"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tag1"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"VALUE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TIMESTAMP"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-01T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"RESULT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ok"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"TAG"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tag1"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"VALUE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11.0"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TIMESTAMP"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-02T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"RESULT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ok"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"TAG"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tag1"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"TIMESTAMP"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-03T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"RESULT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fail"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"RESULT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ok"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 <h3 id="remark-주의사항">
   
   
@@ -555,13 +559,17 @@
   
 </h3>
     
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- HTTP/POST https://enuspace.com/api/DAQ/device/GetTagValuesHistory ```json {
-"API_KEY":"_3qd1a3hfko5163ceb2ad174vq1u95yz3",
-"TAGS" : ["Tag1"],
-"START_TIME" : "2024-01-01T00:00:00.000Z",
-"END_TIME" : "2024-01-07T12:00:00.000Z",
-"DURATION" : 86400000 } ```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- HTTP/POST https://enuspace.com/api/DAQ/device/GetTagValuesHistory
 </code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"API_KEY"</span><span class="p">:</span><span class="s2">"_3qd1a3hfko5163ceb2ad174vq1u95yz3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"TAGS"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Tag1"</span><span class="p">],</span><span class="w">
+	</span><span class="nl">"START_TIME"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-01T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"END_TIME"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-07T12:00:00.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"DURATION"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">86400000</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
           
 
