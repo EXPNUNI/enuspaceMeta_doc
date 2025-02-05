@@ -1596,46 +1596,46 @@
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValue/"
   },"228": {
     "doc": "GetTagValues",
-    "title": "Server API",
-    "content": " ",
-    "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#server-api",
-    
-    "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#server-api"
-  },"229": {
-    "doc": "GetTagValues",
-    "title": "GetTagValues(Param1)",
-    "content": "- 태그의 가장 최신 값을 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\", \"TAGS\":[ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 . { \"MSG\": \"\", \"DATA\": [ { \"DATA\": [ { \"TAG\": \"태그1\", \"VALUE\": \"11.0\", \"TIMESTAMP\": \"2023-05-16T03:32:54.419\", \"RESULT\": \"Ok\" }, { \"TAG\": \"태그2\", \"VALUE\": \"12.0\", \"TIMESTAMP\": \"2023-05-16T03:32:54.419\", \"RESULT\": \"Ok\" }, ], \"TABLE\": \"테이블명\" } ], \"RESULT\": \"Ok\" } . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/Device/GetTagValues . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TAGS\":[ \"LED_1\", \"Temp_2\" ] } . ",
-    "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1",
-    
-    "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1"
-  },"230": {
-    "doc": "GetTagValues",
-    "title": "GetTagValues",
-    "content": " ",
-    "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/",
-    
-    "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
-  },"231": {
-    "doc": "GetTagValues",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api"
-  },"232": {
+  },"229": {
     "doc": "GetTagValues",
     "title": "GetTagValues(DB Table Name,Tag Array)",
     "content": "- DAQ(데이터취득)시스템으로부터 데이터를 요청하는 함수입니다. Parameter (인자) . | Name | Type | Description | Default | . | DB Table Name | string | DB Table 이름 |   | . | Tag Array | string Array | Tag 이름 |   | . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"Bla ~bla~\", \"Data\": { \"Table\" : \"테이블명1\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } { \"Table\" : \"테이블명2\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } } ``` . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() local data = {\"tag1\", \"tag2\", \"tag3\"} ID_TEXT.text = GetTagValues(\"table\",data) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesdb-table-nametag-array",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesdb-table-nametag-array"
-  },"233": {
+  },"230": {
     "doc": "GetTagValues",
     "title": "GetTagValues",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
+  },"231": {
+    "doc": "GetTagValues",
+    "title": "Server API",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#server-api",
+    
+    "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#server-api"
+  },"232": {
+    "doc": "GetTagValues",
+    "title": "GetTagValues(Param1)",
+    "content": "- 태그의 가장 최신 값을 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\", \"TAGS\":[ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 . { \"MSG\": \"\", \"DATA\": [ { \"DATA\": [ { \"TAG\": \"태그1\", \"VALUE\": \"11.0\", \"TIMESTAMP\": \"2023-05-16T03:32:54.419\", \"RESULT\": \"Ok\" }, { \"TAG\": \"태그2\", \"VALUE\": \"12.0\", \"TIMESTAMP\": \"2023-05-16T03:32:54.419\", \"RESULT\": \"Ok\" }, ], \"TABLE\": \"테이블명\" } ], \"RESULT\": \"Ok\" } . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/Device/GetTagValues . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TAGS\":[ \"LED_1\", \"Temp_2\" ] } . ",
+    "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1",
+    
+    "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesparam1"
+  },"233": {
+    "doc": "GetTagValues",
+    "title": "GetTagValues",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/",
+    
+    "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
   },"234": {
     "doc": "GetTopObjectAtPosition",
     "title": "Lua API",
@@ -1856,7 +1856,7 @@
   },"265": {
     "doc": "RegistFunction",
     "title": "RegistFunction(Param1, Param2, Param3)",
-    "content": "- 객체에 함수를 등록합니다. Parameter (인자) . - Param1 : 함수 명 - Param2 : 함수 내용 - Param3 : 객체 또는 객체 ID . Return (반환값) . - none . Remark (주의사항) . - 입력받은 ID에 해당하는 객체는 함수 실행 위치에서 접근 가능한 객체일 경우에만 가져올 수 있습니다. use객체 외부에서 use객체 내부의 객체에 대해서 접근할 수 없습니다. - Trend의 component를 가져오려면 TrendID.ComponentID의 형태로 가져옵니다. 사용예시 . function _onclick() --TODO Add your lua script code here RegistFunction(\"_onload()\", \"function _onload()\\nwidth = width + 100\\nend\", \"ID_RECT\"); end function _onclick() --TODO Add your lua script code here RegistFunction(\"_onload()\", \"function _onload()\\nwidth = width + 100\\nend\", ID_RECT); end . ",
+    "content": "- 객체에 함수를 등록합니다. Parameter (인자) . - Param1 : 함수 명 - Param2 : 함수 내용 - Param3 : 객체 또는 객체 ID . Return (반환값) . - none . Remark (주의사항) . - 입력받은 ID에 해당하는 객체는 함수 실행 위치에서 접근 가능한 객체일 경우에만 가져올 수 있습니다. use객체 외부에서 use객체 내부의 객체에 대해서 접근할 수 없습니다. - Trend의 component를 가져오려면 TrendID.ComponentID의 형태로 가져옵니다. 사용예시 . function _onclick() --TODO Add your lua script code here RegistFunction(\"_onload\", \"function _onload()\\nwidth = width + 100\\nend\", \"ID_RECT\"); end function _onclick() --TODO Add your lua script code here RegistFunction(\"_onload\", \"function _onload()\\nwidth = width + 100\\nend\", ID_RECT); end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/RegistFunction/#registfunctionparam1-param2-param3",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/RegistFunction/#registfunctionparam1-param2-param3"
@@ -2267,195 +2267,209 @@
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/"
   },"324": {
+    "doc": "audio",
+    "title": "Graphics (Audio)",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/audio/#graphics-audio",
+    
+    "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/audio/#graphics-audio"
+  },"325": {
+    "doc": "audio",
+    "title": "audio",
+    "content": ". 오디오 객체에 대하여 설명합니다. Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000”, “url(#ID_buAIdw_GRAD)” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | rx | float | 객체의 x축 라운드 속성 | value | . | ry | float | 객체의 y축 라운드 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 (현재 미반영) | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Function (함수) . 아래의 테이블의 함수 정보는 스크립트상에서 연계되는 함수 이름과 파라미터 정보입니다. | Function | parameter | Return | Description | . | PlayAudio | void | void | 오디오 실행 | . | StopAudio | void | void | 오디오 정지 | . | PauseAudio | void | void | 오디오 일시 정지 | . | ControlAudio | float | void | 오디오 재생 위치 조정 (0~1) | . | ControlVolume | float | void | 오디오 볼륨 크기 조정 (0~1) | . | GetStatus | void | int | 오디오 상태 조회 (0 : 오디오 할당 실패, 1: 오디오 정지, 2: 오디오 재생 중) | . | GetDuration | void | float | 할당된 오디오 전체 재생 시간 조회 | . | GetCurrentTime | void | float | 할당된 오디오 현재 재생 시간 조회 | . | GetVolume | void | float | 오디오 현재 볼륨 크기 조회 (0~1) | . Lua Script (함수사용 예시) . function _onmousedown() --TODO Add your lua script code here rx = rx + 1 end . function _onmousedown() --TODO Add your lua script code here ID_AUDIO.rx = ID_AUDIO.rx + 1 end . function _onmousedown() --TODO Add your lua script code here ID_AUDIO.PlayAudio() ID_AUDIO.PauseAudio() -- 재생 위치를 전체의 0.5부분으로 이동 ID_AUDIO.ControlAudio(0.5) -- 음량 0.5로 조정 ID_AUDIO.ControlVolume(0.5) -- 55.45 ID_AUDIO.GetDuration() end . ",
+    "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/audio/",
+    
+    "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/audio/"
+  },"326": {
     "doc": "circle",
     "title": "Graphics (Circle)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/circle/#graphics-circle",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/circle/#graphics-circle"
-  },"325": {
+  },"327": {
     "doc": "circle",
     "title": "circle",
     "content": ". 원 객체에 대하여 설명합니다. enuSpace는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_circle.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | use_text | bool | 텍스트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | cx | float | 객체의 센터 x위치 속성 | value | . | cy | float | 객체의 센터 y위치 속성 | value | . | r | float | 객체의 반지름 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onmousedown() --TODO Add your lua script code here r = r + 1 end . function _onmousedown() --TODO Add your lua script code here ID_CIRCLE.r = ID_CIRCLE.r + 1 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/circle/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/circle/"
-  },"326": {
+  },"328": {
     "doc": "editbox",
     "title": "Graphics (Editbox)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/editbox/#graphics-editbox",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/editbox/#graphics-editbox"
-  },"327": {
+  },"329": {
     "doc": "editbox",
     "title": "editbox",
     "content": ". 에디트박스 객체에 대하여 설명합니다. Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 0~1 |   | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | font_family | string | 폰트 이름 속성 | “arial”… | . | font_size | float | 폰트 사이즈 속성 | value | . | font_style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | font_weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | text_color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#00000” | . | disabled | bool | 비활성화 속성 | true, false | . | multiline | bool | 다중 라인 속성 | true, false | . | password | bool | 패스워드 속성 | true, false | . | read_only | bool | 읽기전용 속성 | true, false | . | want_return | bool | 엔터 속성 | true, false | . | text_align | string | 텍스트 정렬 속성 | “left”, “center”, “right” | . | border | bool | 외곽선 속성 | true, false | . | number | bool | 숫자 입력 속성 | true, false | . | lowercase | bool | 소문자 속성 | true, false | . | uppercase | bool | 대문자 속성 | true, false | . | static_edge | bool | edge 디스플레이 속성 | true, false | . | auto_scroll | bool | 자동 스크롤 속성 | true, false | . | horizontal_scroll | bool | 수평 스크롤 속성 | true, false | . | vertical_scroll | bool | 수직 스크롤 속성 | true, false | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . Lua Script (함수사용 예시) . function _onmousedown() --TODO Add your lua script code here text = \"mouse click\" width = width + 10 end . function _onmousedown() --TODO Add your lua script code here ID_EDIT.font_style = \"normal\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/editbox/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/editbox/"
-  },"328": {
+  },"330": {
     "doc": "ellipse",
     "title": "Graphics (Ellipse)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/ellipse/#graphics-ellipse",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/ellipse/#graphics-ellipse"
-  },"329": {
+  },"331": {
     "doc": "ellipse",
     "title": "ellipse",
     "content": ". 타원 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_ellipse.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | use_text | bool | 텍스트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | cx | float | 객체의 센터 x위치 속성 | value | . | cy | float | 객체의 센터 y위치 속성 | value | . | rx | float | 객체의 x축 반지름 속성 | value | . | ry | float | 객체의 y축 반지름 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() rx = rx + 1 end . function _onclick() ID_ELLIPSE.rx = ID_ELLIPSE.rx + 1 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/ellipse/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/ellipse/"
-  },"330": {
+  },"332": {
     "doc": "gradient",
     "title": "Graphics (Gradient)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#graphics-gradient",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#graphics-gradient"
-  },"331": {
+  },"333": {
     "doc": "gradient",
     "title": "Linear gradient",
     "content": "객체에 gradient 색상을 제공합니다. 현재 gradient 색상이 지원되는 객체는 rect, circle, ellipse, path, polygon 총 5가지 객체 입니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_grad_linear.asp . gradient 색상이 지원되는 객체의 fill 속성 왼쪽의 아이콘을 클릭해서 gradient가 적용된 fill 속성을 사용할 수 있습니다. ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient"
-  },"332": {
+  },"334": {
     "doc": "gradient",
     "title": "Linear Gradient",
     "content": ". Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() ID_RECT.gradient.gradient_type = \"linearGradient\" ID_RECT.gradient.stop_count = 2 ID_RECT.gradient.x1 = 0 ID_RECT.gradient.y1 = 50 ID_RECT.gradient.x2 = 100 ID_RECT.gradient.y2 = 50 ID_RECT.gradient.stop1.offset = 20 ID_RECT.gradient.stop2.offset = 60 ID_RECT.gradient.stop1.stop_color = 20 ID_RECT.gradient.stop2.stop_color = 60 ID_RECT.gradient.stop1.stop_opacity = 0.8 ID_RECT.gradient.stop2.stop_opacity = 0.2 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient-1",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient-1"
-  },"333": {
+  },"335": {
     "doc": "gradient",
     "title": "Radial Gradient",
     "content": ". Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() ID_RECT.gradient.gradient_type = \"radialGradient\" ID_RECT.gradient.cx = 50 ID_RECT.gradient.cy = 50 ID_RECT.gradient.fx = 20 ID_RECT.gradient.fy = 20 ID_RECT.gradient.r = 50 ID_RECT.gradient.stop_count = 2 ID_RECT.gradient.stop1.offset = 20 ID_RECT.gradient.stop2.offset = 60 ID_RECT.gradient.stop1.stop_color = 20 ID_RECT.gradient.stop2.stop_color = 60 ID_RECT.gradient.stop1.stop_opacity = 0.8 ID_RECT.gradient.stop2.stop_opacity = 0.2 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#radial-gradient",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#radial-gradient"
-  },"334": {
+  },"336": {
     "doc": "gradient",
     "title": "gradient",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/"
-  },"335": {
+  },"337": {
     "doc": "image",
     "title": "Graphics (Image)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/image/#graphics-image",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/image/#graphics-image"
-  },"336": {
+  },"338": {
     "doc": "image",
     "title": "image",
     "content": ". 이미지 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_image.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 | value 라운드 | . | href | string | 객체의 파일 패스 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . Lua Script (함수사용 예시) . function _onclick() href = \"\\\\resource\\\\jupiter_logo.png\" end . function _onclick() href = \"data:image/png;base64,iVBORw0KGgoAAAA...\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/image/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/image/"
-  },"337": {
+  },"339": {
     "doc": "Home",
     "title": "enuSpaceMeta Manual",
     "content": " ",
     "url": "/enuspaceMeta_doc/#enuspacemeta-manual",
     
     "relUrl": "/#enuspacemeta-manual"
-  },"338": {
+  },"340": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/enuspaceMeta_doc/",
     
     "relUrl": "/"
-  },"339": {
+  },"341": {
     "doc": "line",
     "title": "Graphics (Line)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/line/#graphics-line",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/line/#graphics-line"
-  },"340": {
+  },"342": {
     "doc": "line",
     "title": "line",
     "content": ". 라인 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_line.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value |   | . | visibility | bool | 객체의 visibility 속성 | true, false |   | . | lock | bool | 객체의 잠금 속성 | true, false |   | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 |   | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” |   | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” |   | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” |   | . | x1 | float | 라인 시작 x좌표 | value |   | . | y1 | float | 라인 시작 y좌표 | value |   | . | x2 | float | 라인 끝 x좌표 | value |   | . | y2 | float | 라인 끝 y좌표 | value |   | . | translate_x | float | 객체의 x축 이동 | value |   | . | translate_y | float | 객체의 y축 이동 | value |   | . | scale_x | float | 객체의 x 스케일 | value |   | . | scale_y | float | 객체의 y 스케일 | value |   | . | center_x | float | 객체의 x 센터 설정 | value |   | . | center_y | float | 객체의 y 센터 설정 | value |   | . | &lt;!– | pg_begin_arrow_type | string | 확장 : 시작화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” | . | pg_begin_arrow_size | float | 확장 : 시작 화살표의 사이즈 속성 | value |   | . | pg_begin_arraow_span | string | 확장 : 시작 화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” |   | . | pg_end_arrow_type | string | 확장 : 끝화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” |   | . | pg_end_arrow_size | float | 확장 : 끝화살표의 사이즈 속성 | value |   | . | pg_begin_arrow_span | string | 확장 : 끝화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” –&gt; |   | . gradient - true (optional) . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() y1 = y1 + 1 x1 = 100 end . function _onclick() ID_LINE.y1 = ID_LINE.y1 + 1 ID_LINE.x1 = 100 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/line/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/line/"
-  },"341": {
+  },"343": {
     "doc": "path",
     "title": "Graphics (Path)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/path/#graphics-path",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/path/#graphics-path"
-  },"342": {
+  },"344": {
     "doc": "path",
     "title": "path",
     "content": ". 패스 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_path.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | use_text | bool | 텍스트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | d | string | 객체의 패스 정보 속성 | “M48.5000,48.5000 L0.0000,48.5000 A48.5000,48.5000 0 1,0 48.5000,0.0000 Z” | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() d = \"M0,0 L100,0 L100,100 Z\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/path/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/path/"
-  },"343": {
+  },"345": {
     "doc": "pdf document",
     "title": "pdf document",
     "content": " ",
     "url": "/enuspaceMeta_doc/pdf/",
     
     "relUrl": "/pdf/"
-  },"344": {
+  },"346": {
     "doc": "polygon",
     "title": "Graphics (Polygon)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polygon/#graphics-polygon",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polygon/#graphics-polygon"
-  },"345": {
+  },"347": {
     "doc": "polygon",
     "title": "polygon",
     "content": ". 폴리곤 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_polygon.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value |   | . | visibility | bool | 객체의 visibility 속성 | true, false |   | . | lock | bool | 객체의 잠금 속성 | true, false |   | . | gradient | bool | 그라디언트 설정 속성 | true, false |   | . | use_text | bool | 텍스트 설정 속성 | true, false |   | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 |   | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 |   | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” |   | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” |   | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” |   | . | points | string | 폴리곤 좌표 리스트 | “0,100 10,200 20,400” |   | . | translate_x | float | 객체의 x축 이동 | value |   | . | translate_y | float | 객체의 y축 이동 | value |   | . | scale_x | float | 객체의 x 스케일 | value |   | . | scale_y | float | 객체의 y 스케일 | value |   | . | center_x | float | 객체의 x 센터 설정 | value |   | . | center_y | float | 객체의 y 센터 설정 | value |   | . | &lt;!– | pg_begin_arrow_type | string | 확장 : 시작화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” | . | pg_begin_arrow_size | float | 확장 : 시작 화살표의 사이즈 속성 | value |   | . | pg_begin_arraow_span | string | 확장 : 시작 화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” |   | . | pg_end_arrow_type | string | 확장 : 끝화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” |   | . | pg_end_arrow_size | float | 확장 : 끝화살표의 사이즈 속성 | value |   | . | pg_begin_arrow_span | string | 확장 : 끝화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” –&gt; |   | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() points = \"0,100 10,200 110,169\" end . function _onclick() ID_POLYLINE.points = \"0,100 10,200 110,169\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polygon/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polygon/"
-  },"346": {
+  },"348": {
     "doc": "polyline",
     "title": "Graphics (Polyline)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polyline/#graphics-polyline",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polyline/#graphics-polyline"
-  },"347": {
+  },"349": {
     "doc": "polyline",
     "title": "polyline",
     "content": ". 폴리라인 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_polyline.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value |   | . | visibility | bool | 객체의 visibility 속성 | true, false |   | . | lock | bool | 객체의 잠금 속성 | true, false |   | . | gradient | bool | 그라디언트 설정 속성 | true, false |   | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 |   | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 |   | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” |   | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” |   | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” |   | . | points | string | 폴리라인 좌표 리스트 | “0,100 10,200 20,400” |   | . | translate_x | float | 객체의 x축 이동 | value |   | . | translate_y | float | 객체의 y축 이동 | value |   | . | scale_x | float | 객체의 x 스케일 | value |   | . | scale_y | float | 객체의 y 스케일 | value |   | . | center_x | float | 객체의 x 센터 설정 | value |   | . | center_y | float | 객체의 y 센터 설정 | value |   | . | &lt;!– | pg_begin_arrow_type | string | 확장 : 시작화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” | . | pg_begin_arrow_size | float | 확장 : 시작 화살표의 사이즈 속성 | value |   | . | pg_begin_arraow_span | string | 확장 : 시작 화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” |   | . | pg_end_arrow_type | string | 확장 : 끝화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” |   | . | pg_end_arrow_size | float | 확장 : 끝화살표의 사이즈 속성 | value |   | . | pg_begin_arrow_span | string | 확장 : 끝화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” –&gt; |   | . Lua Script (함수사용 예시) . function _onclick() points = \"0,100 10,200 110,169\" end . function _onclick() ID_POLYLINE.points = \"0,100 10,200 110,169\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polyline/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polyline/"
-  },"348": {
+  },"350": {
     "doc": "rect",
     "title": "Graphics (Rect)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect/#graphics-rect",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect/#graphics-rect"
-  },"349": {
+  },"351": {
     "doc": "rect",
     "title": "rect",
     "content": ". 사각형 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_rect.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | use_text | bool | 텍스트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | rx | float | 객체의 x축 라운드 속성 | value | . | ry | float | 객체의 y축 라운드 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() width = width + 1 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect/"
-  },"350": {
+  },"352": {
     "doc": "text",
     "title": "Graphics (Text)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/text/#graphics-text",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/text/#graphics-text"
-  },"351": {
+  },"353": {
     "doc": "text",
     "title": "text",
     "content": ". 텍스트 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_text.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | font_family | string | 폰트 이름 속성 | “arial” | . | font_size | float | 폰트 사이즈 속성 | value | . | font_style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | font_weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | text_anchor | string | 텍스트 정렬 속성 | “start”, “middle”, “end” | . | baseline_shift | int | 텍스트 베이스라인 속성 | value | . | text_decoration | string | 텍스트 데코레이션 속성 | “none”, “underline”, “line-through” | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | dx | float | 객체의 x위치 옵셋 속성 | value | . | dy | float | 객체의 y위치 옵셋 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . Lua Script (함수사용 예시) . function _onclick() text = \"mouse click\" end . function _onclick() ID_TEXT.text= \"mouse click\" end . ",
