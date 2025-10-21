@@ -1000,621 +1000,621 @@
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/BringToFront/"
   },"143": {
+    "doc": "CallFunction",
+    "title": "Lua API",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/#lua-api",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/#lua-api"
+  },"144": {
+    "doc": "CallFunction",
+    "title": "CallFunction(Param1, Param2, Param3, Param4 …)",
+    "content": ". | 특정 위치에 존재하는 함수를 호출합니다. | . Parameter (인자) . - Param1 : 픽쳐 이름 (\"picture\\\\Test.svg\") - Param2 : 객체 ID - Param3 : Param2에서 지정한 객체의 실행시킬 함수 - Param4 : 가변 인자 (Param3의 함수에 전달할 파라미터) . Return (반환값) . - none . Remark (주의사항) . 1. Param2는 CallFunction을 실행시킨 객체가 속한 layer의 객체만 선택이 가능함 (다음 케이스 불가능 : use내부 -&gt; use외부 or use외부 -&gt; use내부) 2. Param1에서 \"this\"로 사용 했을 경우 CallFunction을 실행하는 픽쳐를 전달 3. Param2에서 \"this\"로 사용 했을 경우 CallFunction을 실행하는 객체를 전달 4. Param1, Param2를 모두 빈칸으로 두었을 경우 전역으로 선언된 함수에 대해서 사용가능 . Example (함수사용 예시) . -- ID_RECT에 선언된 사용자 정의 함수 TestFunc이 아래와 같다고 가정 function TestFunc(Flag) if Flag then PrintMessage(\"True\") end end function _onclick() CallFunction(\"picture\\\\Test.svg\", \"ID_RECT\", \"TestFunc\", true) end -- 주의사항 4번 예시 function _onclick() CallRemoteFunction(\"\", \"\", \"ShowMarkdown\", \"document/document.md\") end . ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/#callfunctionparam1-param2-param3-param4-",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/#callfunctionparam1-param2-param3-param4-"
+  },"145": {
+    "doc": "CallFunction",
+    "title": "CallFunction",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/"
+  },"146": {
     "doc": "CallRemoteFunction",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/CallRemoteFunction/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/CallRemoteFunction/#lua-api"
-  },"144": {
+  },"147": {
     "doc": "CallRemoteFunction",
-    "title": "CallRemoteFunction(Param1, Param2, …)",
+    "title": "CallRemoteFunction(Param1, Param2, Param3, Param4 …)",
     "content": "- 메타버스 모드에서 모든 클라이언트에게 함수 작동 명령을 내리는 함수 - CallRemoteFunction 파라미터로 실행시킬 함수를 지정하고 실행 시 모든 클라이언트에게 지정한 함수를 실행하라는 명령을 전달. Parameter (인자) . - Param1 : 픽쳐 이름 (\"picture\\\\Test.svg\") - Param2 : 객체 ID - Param3 : Param2에서 지정한 객체의 실행시킬 함수 - Param4 : 가변 인자 (Param3의 함수에 전달할 파라미터) . Return (반환값) . - none . Remark (주의사항) . 1. Param2는 CallRemoteFunction을 실행시킨 객체가 속한 layer의 객체만 선택이 가능함 (다음 케이스 불가능 : use내부 -&gt; use외부 or use외부 -&gt; use내부) 2. Param1에서 \"this\"로 사용 했을 경우 CallRemoteFunction을 실행하는 픽쳐를 전달 3. Param2에서 \"this\"로 사용 했을 경우 CallRemoteFunction을 실행하는 객체를 전달 4. Param1, Param2를 모두 빈칸으로 두었을 경우 전역으로 선언된 함수에 대해서 사용가능 . Example (함수사용 예시) . function _onclick() CallRemoteFunction(\"picture\\\\Test.svg\", \"this\", \"TestFunc\", true) end function TestFunc(Flag) if Flag then PrintMessage(\"True\") end end -- 주의사항 4번 예시 function _onclick() CallRemoteFunction(\"\", \"\", \"ShowMarkdown\", \"document/document.md\") end . ",
-    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/CallRemoteFunction/#callremotefunctionparam1-param2-",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/CallRemoteFunction/#callremotefunctionparam1-param2-param3-param4-",
     
-    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/CallRemoteFunction/#callremotefunctionparam1-param2-"
-  },"145": {
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/CallRemoteFunction/#callremotefunctionparam1-param2-param3-param4-"
+  },"148": {
     "doc": "CallRemoteFunction",
     "title": "CallRemoteFunction",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/CallRemoteFunction/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/CallRemoteFunction/"
-  },"146": {
+  },"149": {
     "doc": "ChangePicture",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ChangePicture/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ChangePicture/#lua-api"
-  },"147": {
+  },"150": {
     "doc": "ChangePicture",
     "title": "ChangePicture(Param1, Param2)",
     "content": "- 픽처의 화면전환을 수행하는 함수입니다. Parameter (인자) . - Param1 : 켄버스 이름 - Param2 : 픽처 이름 . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() ChangePicture(＂this＂, ＂picture\\\\ocean.svg＂) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ChangePicture/#changepictureparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ChangePicture/#changepictureparam1-param2"
-  },"148": {
+  },"151": {
     "doc": "ChangePicture",
     "title": "ChangePicture",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ChangePicture/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ChangePicture/"
-  },"149": {
+  },"152": {
     "doc": "CreateCircle",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateCircle/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateCircle/#lua-api"
-  },"150": {
+  },"153": {
     "doc": "CreateCircle",
     "title": "CreateCircle",
     "content": "- Circle 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : float r - Param3 : float cx - Param4 : float cy - Param5 : float transX - Param6 : float transY . Return (반환값) . - Circle 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreateCircle(\"ID_CIRCLE\",100,200,200,0,0) obj.r = 400 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateCircle/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateCircle/"
-  },"151": {
+  },"154": {
     "doc": "CreateEllipse",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateEllipse/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateEllipse/#lua-api"
-  },"152": {
+  },"155": {
     "doc": "CreateEllipse",
     "title": "CreateEllipse",
     "content": "- Ellipse 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : float rx - Param3 : float ry - Param4 : float cx - Param5 : float cy - Param6 : float transX - Param7 : float transY . Return (반환값) . - Ellipse 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreateEllipse(\"ID_ELLIPSE\",100,50,200,200,0,0) obj.rx = 200 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateEllipse/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateEllipse/"
-  },"153": {
+  },"156": {
     "doc": "CreateImage",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateImage/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateImage/#lua-api"
-  },"154": {
+  },"157": {
     "doc": "CreateImage",
     "title": "CreateImage",
     "content": "- Image 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : string href - Param3 : float x - Param4 : float y - Param5 : float width - Param6 : float height - Param7 : float transX - Param8 : float transY . Return (반환값) . - Image 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . -- 외부 링크 이미지 function _onclick() local obj = CreateImage(\"ID_IMAGE\", \"https://expnuni.github.io/enuspace_doc/assets/enuspace.png\", 0,0,200,200,0,0) obj.href = \"/resource/back.png\" end -- 프로젝트 내부 resource 폴더의 이미지 function _onclick() local obj = CreateImage(\"ID_IMAGE\", \"/resource/back.png\", 0,0,200,200,0,0) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateImage/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateImage/"
-  },"155": {
+  },"158": {
     "doc": "CreateLine",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateLine/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateLine/#lua-api"
-  },"156": {
+  },"159": {
     "doc": "CreateLine",
     "title": "CreateLine",
     "content": "- Line 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : float x1 - Param3 : float y1 - Param4 : float x2 - Param5 : float y2 - Param6 : float transX - Param7 : float transY . Return (반환값) . - Line 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreateLine(\"ID_LINE\",0,0,200,200,0,0) obj.x1 = 100 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateLine/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateLine/"
-  },"157": {
+  },"160": {
     "doc": "CreateObject",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateObject/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateObject/#lua-api"
-  },"158": {
+  },"161": {
     "doc": "CreateObject",
     "title": "CreateObject(Param1, Param2, Param3…)",
     "content": "- 그래픽 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 타입 - Param2 : string 객체 ID - Param3 : 객체에 따른 가변인자 . 가변인자 / 사용예시 . Rect ### 가변인자 param3 : float x param4 : float y param5 : float width param6 : float height param7 : float transX param8 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"rect\",\"ID_RECT\",0,0,200,200,0,0) obj.width = 300 end ``` Line ### 가변인자 param3 : float x1 param4 : float y1 param5 : float x2 param6 : float y2 param7 : float transX param8 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"line\",\"ID_LINE\",0,0,200,200,0,0) obj.x1 = 100 end ``` Circle ### 가변인자 param3 : float r param4 : float cx param5 : float cy param6 : float transX param7 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"circle\",\"ID_CIRCLE\",100,200,200,0,0) obj.r = 400 end ``` Ellipse ### 가변인자 param3 : float rx param4 : float ry param5 : float cx param6 : float cy param7 : float transX param8 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"ellipse\",\"ID_ELLIPSE\",100,50,200,200,0,0) obj.rx = 200 end ``` Path ### 가변인자 param3 : string d param4 : float transX param5 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"path\",\"ID_PATH\", \"M0,0 L100,100 L0,100 Z\", 0,0) obj.d = \"M100,0 L100,100 L0,0\" end ``` Polygon ### 가변인자 param3 : string points param4 : float transX param5 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"polygon\",\"ID_POLYGON\", \"0,0 50,50 100,0\", 0,0) obj.translate_x = 200 end ``` Polyline ### 가변인자 param3 : string points param4 : float transX param5 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"polyline\",\"ID_POLYLINE\", \"0,0 50,50 100,0\", 0,0) obj.translate_x = 200 end ``` Image ### 가변인자 param3 : string href param4 : float x param5 : float y param6 : float width param7 : float height param8 : float transX param9 : float transY ### 사용예시 ```lua -- 외부 링크 이미지 function _onclick() local obj = CreateObject(\"image\",\"ID_IMAGE\", \"https://expnuni.github.io/enuspace_doc/assets/enuspace.png\", 0,0,200,200,0,0) obj.href = \"/resource/back.png\" end -- 프로젝트 내부 resource 폴더의 이미지 function _onclick() local obj = CreateObject(\"image\",\"ID_IMAGE\", \"/resource/back.png\", 0,0,200,200,0,0) end ``` Text ### 가변인자 param3 : string text param4 : float x param5 : float y param6 : float dx param7 : float dy param8 : float transX param8 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"text\",\"ID_TEXT\", \"Hello, World!\",0,0,0,0,0,0) obj.text = \"Hello, World!!!\" end ``` Use ### 가변인자 param3 : string href (ex : #symbolName) param4 : float transX param5 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"use\",\"ID_USE\", \"#symbolName\",0,0) obj.translate_x = 200 end ``` Trend ### 가변인자 param3 : string Trend Type 1. 방사형 차트 (param3 : trend-radar) 2. 히스토그램 차트 (param3 : trend-histogram) 3. 실시간 차트 (param3 : trend-realtime) 4. Countour 차트 (param3 : trend-contour-rect) param4 : float x param5 : float y param6 : float width param7 : float height param8 : float transX param9 : float transY ### 사용예시 ```lua function _onclick() local obj = CreateObject(\"pg-trend\",\"ID_TREND\", \"trend-histogram\",0,0,500,500,0,0) obj.translate_x = 200 end ``` . Return (반환값) . - 타입에 따른 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateObject/#createobjectparam1-param2-param3",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateObject/#createobjectparam1-param2-param3"
-  },"159": {
+  },"162": {
     "doc": "CreateObject",
     "title": "CreateObject",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateObject/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateObject/"
-  },"160": {
+  },"163": {
     "doc": "CreatePath",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePath/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePath/#lua-api"
-  },"161": {
+  },"164": {
     "doc": "CreatePath",
     "title": "CreatePath",
     "content": "- Path 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : string d - Param3 : float transX - Param4 : float transY . Return (반환값) . - Path 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreatePath(\"ID_PATH\", \"M0,0 L100,100 L0,100 Z\", 0,0) obj.d = \"M100,0 L100,100 L0,0\" end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePath/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePath/"
-  },"162": {
+  },"165": {
     "doc": "CreatePolygon",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePolygon/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePolygon/#lua-api"
-  },"163": {
+  },"166": {
     "doc": "CreatePolygon",
     "title": "CreatePolygon",
     "content": "- Polygon 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : string points - Param3 : float transX - Param4 : float transY . Return (반환값) . - Polygon 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreatePolygon(\"ID_POLYGON\", \"0,0 50,50 100,0\", 0,0) obj.translate_x = 200 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePolygon/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePolygon/"
-  },"164": {
+  },"167": {
     "doc": "CreatePolyline",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePolyline/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePolyline/#lua-api"
-  },"165": {
+  },"168": {
     "doc": "CreatePolyline",
     "title": "CreatePolyline",
     "content": "- Polyline 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : string d - Param3 : float transX - Param4 : float transY . Return (반환값) . - Polyline 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreatePolyline(\"ID_POLYLINE\", \"0,0 50,50 100,0\", 0,0) obj.translate_x = 200 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePolyline/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreatePolyline/"
-  },"166": {
+  },"169": {
     "doc": "CreateRect",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateRect/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateRect/#lua-api"
-  },"167": {
+  },"170": {
     "doc": "CreateRect",
     "title": "CreateRect",
     "content": "- Rect 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : float x - Param3 : float y - Param4 : float width - Param5 : float height - Param6 : float transX - Param7 : float transY . Return (반환값) . - Rect 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreateRect(\"ID_RECT\",0,0,200,200,0,0) obj.width = 300 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateRect/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateRect/"
-  },"168": {
+  },"171": {
     "doc": "CreateTable",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/CreateTable/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/CreateTable/#server-api"
-  },"169": {
+  },"172": {
     "doc": "CreateTable",
     "title": "CreateTable(Param1)",
     "content": "- Table 생성을 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"MEMBER_SYSTEMID\" : \"사용자 System ID\", \"DB_TABLE_NAME\" : \"테이블명\", \"TAG_INFO_LIST\" : [ { \"TAG\" : \"태그1\", \"DATA_TYPE\" : \"데이터 타입(string, int, double)\", \"DESCRIPTION\" : \"태그 설명\", \"IO_TYPE\" : \"디바이스 Input/Output 타입\", \"VALUE\" : \"초기값\", \"SAVE_HISTORY\" : \"VALUE 변경 기록 저장 여부 (true, false)\" }, { \"TAG\" : \"태그2\", \"DATA_TYPE\" : \"데이터 타입(string, int, double)\", \"DESCRIPTION\" : \"태그 설명\", \"IO_TYPE\" : \"디바이스 Input/Output 타입\", \"VALUE\" : \"초기값\", \"SAVE_HISTORY\" : \"VALUE 변경 기록 저장 여부 (true, false)\" } ] } . Return (반환값) . - 데이터 Tag의 정보 . { \"RESULT\" : \"Ok\", \"MSG\" : \"Table is added to metadata\\nTable is created to postgresql\", \"DATA\": { \"API_KEY\": \"ApiKey\" } } . Remark (주의사항) . - DB_TYPE 생략시 기본값 Postgresql - TAG_INFO_LIST 생략 가능 . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/device/CreateTable . { \"MEMBER_SYSTEMID\": \"test_user\", \"DB_TABLE_NAME\": \"Table1\", \"TAG_INFO_LIST\": [ { \"TAG\": \"LED_1\", \"DATA_TYPE\": \"int\", \"DESCRIPTION\": \"LED\", \"IO_TYPE\": \"Output\", \"VALUE\": \"0\", \"SAVE_HISTORY\": true }, { \"TAG\": \"Temp_2\", \"DATA_TYPE\": \"double\", \"DESCRIPTION\": \"temp\", \"IO_TYPE\": \"Input\", \"VALUE\" : \"36.5\", \"SAVE_HISTORY\": true } ] } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/CreateTable/#createtableparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/CreateTable/#createtableparam1"
-  },"170": {
+  },"173": {
     "doc": "CreateTable",
     "title": "CreateTable",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/CreateTable/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/CreateTable/"
-  },"171": {
+  },"174": {
     "doc": "CreateText",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateText/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateText/#lua-api"
-  },"172": {
+  },"175": {
     "doc": "CreateText",
     "title": "CreateText",
     "content": "- Text 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : string text - Param3 : float x - Param4 : float y - Param5 : float dx - Param6 : float dy - Param7 : float transX - Param8 : float transY . Return (반환값) . - Text 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreateText(\"ID_TEXT\", \"Hello, World!\",0,0,0,0,0,0) obj.text = \"Hello, World!!!\" end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateText/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateText/"
-  },"173": {
+  },"176": {
     "doc": "CreateTrend",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateTrend/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateTrend/#lua-api"
-  },"174": {
+  },"177": {
     "doc": "CreateTrend",
     "title": "CreateTrend",
     "content": "- Trend 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - param2 : string Trend Type 1. 방사형 차트 (param3 : trend-radar) 2. 히스토그램 차트 (param3 : trend-histogram) 3. 실시간 차트 (param3 : trend-realtime) 4. Countour 차트 (param3 : trend-contour-rect) - Param3 : float x - Param4 : float y - Param5 : float width - Param6 : float height - Param7 : float transX - Param8 : float transY . Return (반환값) . - Trend 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreateTrend(\"ID_TEXT\", \"trend-histogram\",0,0,500,500,0,0) obj.width = 300 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateTrend/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateTrend/"
-  },"175": {
+  },"178": {
     "doc": "CreateUse",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateUse/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateUse/#lua-api"
-  },"176": {
+  },"179": {
     "doc": "CreateUse",
     "title": "CreateUse",
     "content": "- Use 객체를 생성하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID - Param2 : string href (ex : #symbolName) - Param3 : float transX - Param4 : float transY . Return (반환값) . - Use 객체 - 객체 생성에 실패하였을 경우 0을 반환 . Remark (주의사항) . - 타입에 맞는 인자 개수를 기입하지 않을 시 에러 . 사용예시 . function _onclick() local obj = CreateUse(\"ID_USE\", \"#symbolName\",0,0) obj.translate_x = 200 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateUse/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/CreateUse/"
-  },"177": {
+  },"180": {
     "doc": "DeleteObjects",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/DeleteObjects/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/DeleteObjects/#lua-api"
-  },"178": {
+  },"181": {
     "doc": "DeleteObjects",
     "title": "DeleteObjects(Param1…)",
     "content": "- 객체를 삭제하는 함수입니다. Parameter (인자) . - Param1 : string 객체 ID . Return (반환값) . - none . Remark (주의사항) . - 파라미터 개수만큼 삭제를 수행합니다. - 에러 발생 시 로그에 에러메세지 기록 후 다음 파라미터로 넘어가서 마저 수행합니다. - 함수 실행 위치에서 접근 가능한 객체만 삭제할 수 있습니다. - 예를 들어, use객체 외부에서 use객체 내부의 객체에 대해서 삭제를 수행할 수 없습니다. 사용예시 . function _onclick() DeleteObjects(\"ID_Rect\", \"ID_Path\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/DeleteObjects/#deleteobjectsparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/DeleteObjects/#deleteobjectsparam1"
-  },"179": {
+  },"182": {
     "doc": "DeleteObjects",
     "title": "DeleteObjects",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/DeleteObjects/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/DeleteObjects/"
-  },"180": {
+  },"183": {
     "doc": "DeleteSQLite",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/DeleteSQLite/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/DeleteSQLite/#lua-api"
-  },"181": {
+  },"184": {
     "doc": "DeleteSQLite",
     "title": "DeleteSQLite(Param1, Param2)",
     "content": "- enuSpace Meta 서버의 프로젝트의 저장된 SQLite파일의 데이터를 삭제하는 함수 . Parameter (인자) . - Param1 : SQLite filename (path정보를 포함한 filename) - Param2 : SQLite query . Return (반환값) . - 정상적인 경우 서버측 프로젝트 내에 존재하는 파일명을 입력하고 delete쿼리를 제대로 입력했을때 정상적으로 반환된 json포맷 예시 . { \"Result\" : \"OK\", \"Msg\" : \"Success Delete.\" } . Remark (주의사항) . - 비정상적인 경우 1. 서버측 프로젝트 내에 존재하지 않는 파일명을 입력했을때 2. 쿼리를 잘못 입력했을때 비정상적으로 반환된 json포맷 예시 . 1. { \"Result\" : \"FAIL\", \"Msg\" : \"Could not find db file.\" } 2. { \"Result\" : \"FAIL\", \"Msg\" : \"error message.\" } . - 쿼리가 정상적으로 실행될 경우 데이터베이스 파일이 변환되기 때문에 새로고침이 됩니다. Example (함수사용 예시) . function _onclick() local data = DeleteSQLite(\"test1.db\", \"DELETE FROM COMPANY WHERE ID=5;\") local jsondcode = Json.decode(data) if(jsondcode.Result == \"OK\") then PrintMessage(jsondcode.Msg) else -- jsondcode.Result == \"FAIL\" PrintMessage(jsondcode.Msg) end end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/DeleteSQLite/#deletesqliteparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/DeleteSQLite/#deletesqliteparam1-param2"
-  },"182": {
+  },"185": {
     "doc": "DeleteSQLite",
     "title": "DeleteSQLite",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/DeleteSQLite/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/DeleteSQLite/"
-  },"183": {
+  },"186": {
     "doc": "DeleteTable",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTable/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTable/#server-api"
-  },"184": {
+  },"187": {
     "doc": "DeleteTable",
     "title": "CreateTable(Param1)",
     "content": "- 테이블 삭제를 요청하는 API입니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\": \"ApiKey\" } . Return (반환값) . - 데이터 Tag의 정보 . { \"RESULT\" : \"Ok\", \"MSG\" : \"\" } . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/device/DeleteTable . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTable/#createtableparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTable/#createtableparam1"
-  },"185": {
+  },"188": {
     "doc": "DeleteTable",
     "title": "DeleteTable",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTable/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTable/"
-  },"186": {
+  },"189": {
     "doc": "DeleteTag",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTag/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTag/#server-api"
-  },"187": {
+  },"190": {
     "doc": "DeleteTag",
     "title": "DeleteTag(Param1)",
     "content": "- 테이블의 태그를 삭제합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\", \"TAGS\" : [ \"태그1\", \"태그2\" ] } . Return (반환값) . - 데이터 Tag의 정보 . { \"RESULT\" : \"Ok\", \"MSG\" : \"\" } . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/device/DeleteTag . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TAGS\" : [ \"LED_1\", \"Temp_2\" ] } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTag/#deletetagparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTag/#deletetagparam1"
-  },"188": {
+  },"191": {
     "doc": "DeleteTag",
     "title": "DeleteTag",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTag/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/DeleteTag/"
-  },"189": {
+  },"192": {
     "doc": "ExternalFunctionJS",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/#lua-api"
-  },"190": {
+  },"193": {
     "doc": "ExternalFunctionJS",
     "title": "ExternalFunctionJS(Param1)",
     "content": "- 루아 스크립트함수에서 외부의 JS함수를 호출하는 함수입니다. - enuSpaceInterface.js 파일의 Call_ExternalFunctionJS(strParam)함수를 호출합니다. Parameter (인자) . - Param1 : 사용자 정의 파라미터 입력 . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() value = ExternalFunctionJS(strParam) end . function Call_ExternalFunctionJS(strParam) { var URL = \"\";               // 사용자 서버주소를 지정 var data = \"\";              // 사용자 파라미터 지정 var RequestURL = UTF8ToString(URL); var RequestData = UTF8ToString(Data); var xmlHttp = new XMLHttpRequest(); xmlHttp.onreadystatechange=function()     { if (xmlHttp.readyState==4 &amp;&amp; xmlHttp.status==200) {               var msg = xmlHttp.responseText;         // msg 내용         // {\"TagName\":\"Test2_Tag0\",\"Value\":\"0.265387\"},{\"TagName\":\"Test2_Tag1\",\"Value\":\"0.340363\"} User_SetGlobalValues(msg); }     };     xmlHttp.open(\"POST\",RequestURL,true); xmlHttp.setRequestHeader(\"Content-Type\",\"text/plain\");     xmlHttp.send(RequestData); } . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/#externalfunctionjsparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/#externalfunctionjsparam1"
-  },"191": {
+  },"194": {
     "doc": "ExternalFunctionJS",
     "title": "ExternalFunctionJS",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/"
-  },"192": {
+  },"195": {
     "doc": "FocusObject",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/FocusObject/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/FocusObject/#lua-api"
-  },"193": {
+  },"196": {
     "doc": "FocusObject",
     "title": "FocusObject(Param1)",
     "content": "- 실행 시, 입력받은 ID에 해당하는 객체를 찾아 해당 객체를 화면 크기로 zoom-in 합니다. Parameter (인자) . - Param1 : 객체 ID (빈칸 입력 시, 함수 실행 객체를 선택합니다.) . Return (반환값) . - none . Remark (주의사항) . - use객체에서 제공하는 Focus Mode와 같은 기능을 제공합니다. - 한 번 Focus를 실행한 경우, ResetFocus 함수를 통해 해제하거나, svg객체를 focus 하는 것으로 해제할 수 있습니다. - 함수 실행 위치에서 접근 가능한 객체만 가져올 수 있습니다. - 예를 들어, use객체 외부에서 use객체 내부의 객체에 대해서 접근할 수 없습니다. - Trend의 component를 가져오려면 TrendID.ComponentID의 형태로 가져옵니다. - 입력한 ID에 해당하는 객체가 존재하지 않을 경우 작동하지 않습니다. 사용예시 . function _onclick() -- 함수 실행 객체 선택 FocusObject(\"\") end function _onclick() -- 입력한 ID에 해당하는 객체 선택 FocusObject(\"ID_IMAGE\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/FocusObject/#focusobjectparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/FocusObject/#focusobjectparam1"
-  },"194": {
+  },"197": {
     "doc": "FocusObject",
     "title": "FocusObject",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/FocusObject/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/FocusObject/"
-  },"195": {
+  },"198": {
     "doc": "GetAllTagFromTable",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetAllTagFromTable/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetAllTagFromTable/#server-api"
-  },"196": {
+  },"199": {
     "doc": "GetAllTagFromTable",
     "title": "GetAllTagFromTable(Param1)",
     "content": "- 테이블에 속한 모든 태그의 리스트를 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\" } . Return (반환값) . - 데이터 Tag의 정보 . [ { \"DB_TABLE_NAME\": \"테이블명\", \"TAG\": \"태그1\", \"DESCRIPTION\": \"태그1 설명\", \"VALUE\": null, \"DATA_TYPE\": \"string\", \"IO_TYPE\": \"input\", \"VARIABLE_NAME\": \"태그1\" }, { \"DB_TABLE_NAME\": \"테이블명\", \"TAG\": \"태그2\", \"DESCRIPTION\": \"태그2 설명\", \"VALUE\": \"10.0\", \"DATA_TYPE\": \"double\", \"IO_TYPE\": \"input\", \"VARIABLE_NAME\": \"태그2\" } ] . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/device/GetAllTagFromTable . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetAllTagFromTable/#getalltagfromtableparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetAllTagFromTable/#getalltagfromtableparam1"
-  },"197": {
+  },"200": {
     "doc": "GetAllTagFromTable",
     "title": "GetAllTagFromTable",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetAllTagFromTable/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetAllTagFromTable/"
-  },"198": {
+  },"201": {
     "doc": "GetHDF5Json",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Json/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Json/#lua-api"
-  },"199": {
+  },"202": {
     "doc": "GetHDF5Json",
     "title": "GetHDF5Json(Param1, Param2, Param3)",
     "content": "- enuSpace Meta 서버의 프로젝트의 hdf5파일의 Json 포맷의 데이터셋을 동기 요청하는 함수 . Parameter (인자) . - Param1 : hdf5 filename - Param2 : hdf5 dataset pathname . Return (반환값) . - json 파일 포맷의 문자열 데이터 . Remark (주의사항) . - none . Example (함수사용 예시) . -- 동기 요청 function _onclick() local data = GetHDF5Json(＂hdf5/Test.h5＂, ＂ROOT/TEST＂) jsondcode = Json.decode(data) dimsi = jsondcode.shape.dims[1] dimsj = jsondcode.shape.dims[2] end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Json/#gethdf5jsonparam1-param2-param3",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Json/#gethdf5jsonparam1-param2-param3"
-  },"200": {
+  },"203": {
     "doc": "GetHDF5Json",
     "title": "GetHDF5Json",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Json/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Json/"
-  },"201": {
+  },"204": {
     "doc": "GetHDF5JsonCallback",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5JsonCallback/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5JsonCallback/#lua-api"
-  },"202": {
+  },"205": {
     "doc": "GetHDF5JsonCallback",
     "title": "GetHDF5JsonCallback(Param1, Param2, Param3)",
     "content": "- enuSpace Meta 서버의 프로젝트의 hdf5파일의 Json 포맷의 데이터셋을 비동기 요청하는 함수 . Parameter (인자) . - Param1 : hdf5 filename - Param2 : hdf5 dataset pathname - Param3 : callback function name . Return (반환값) . - json 파일 포맷의 문자열 데이터 . Remark (주의사항) . - Param3을 빈칸으로 기입 시 요청하지 않음 - callback으로 실행시켜 줄 함수는 GetHDF5JsonCallback 함수가 실행된 객체에 존재해야 함 - callback 함수는 비동기 요청 후 응답 메세지를 받을 파라미터가 필요함에 따라 파라미터를 하나만 사용해야 함 . Example (함수사용 예시) . function _onclick() GetHDF5Json(＂hdf5/Test.h5＂, ＂ROOT/TEST＂, \"_userfunction\") end function _userfunction(msg) jsondcode = Json.decode(msg) dimsi = jsondcode.shape.dims[1] PrintMessage(tostring(dimsi)) end func . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5JsonCallback/#gethdf5jsoncallbackparam1-param2-param3",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5JsonCallback/#gethdf5jsoncallbackparam1-param2-param3"
-  },"203": {
+  },"206": {
     "doc": "GetHDF5JsonCallback",
     "title": "GetHDF5JsonCallback",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5JsonCallback/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5JsonCallback/"
-  },"204": {
+  },"207": {
     "doc": "GetHDF5Object",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Object/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Object/#lua-api"
-  },"205": {
+  },"208": {
     "doc": "GetHDF5Object",
     "title": "GetHDF5Object(Param1, Param2)",
     "content": "- enuSpace Meta 서버의 프로젝트의 hdf5파일의 데이터셋을 요청하는 함수 . Parameter (인자) . - Param1 : hdf5 filename - Param2 : hdf5 dataset pathname . Return (반환값) . - lua 테이블 객체를 반환합니다. Remark (주의사항) . - 타입별 루아 테이블 객체의 구조 ```lua table shape rank dims type class base value ``` . compound table shape rank dims type fields_size fields name class type base value . array table shape rank dims type dims rank base class base value . Example (함수사용 예시) . function _onclick() local HDF5data = GetHDF5Object(fileName, hierachy) local dims1 = HDF5data.shape.dims[0] local dims2 = HDF5data.shape.dims[1] local strdata for i = 0, dims1-1 do for j = 0, dims2-1 do if (i == 0 and j == 0) then strdata = tostring(HDF5data.value[i][j]) else strdata = string.format(\"%s,%s\",strdata, tostring(HDF5data.value[i][j])) end end end data = strdata end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Object/#gethdf5objectparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Object/#gethdf5objectparam1-param2"
-  },"206": {
+  },"209": {
     "doc": "GetHDF5Object",
     "title": "GetHDF5Object",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Object/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.5%20HDF5%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetHDF5Object/"
-  },"207": {
+  },"210": {
     "doc": "GetMultiTagHistory",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetMultiTagHistory/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetMultiTagHistory/#server-api"
-  },"208": {
+  },"211": {
     "doc": "GetMultiTagHistory",
     "title": "GetMultiTagHistory(Param1)",
     "content": "- 특정 태그의 데이터를 시작 시간부터 끝 시간까지 일정 간격으로 나누어 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\", \"TAGS\" : [ \"태그명1\", \"태그명2\" ], \"START_TIME\" : \"취득 히스토리 첫 시간 (yyyy-MM-ddThh:mm:ss.fffZ 포맷, ex. 2024-01-01T00:00:00.000Z)\", \"END_TIME\" : \"취득 히스토리 마지막 시간 (yyyy-MM-ddThh:mm:ss.fffZ 포맷, ex. 2024-01-07T12:00:00.000Z)\", \"DURATION\" : \"데이터 취득 간격 (ms 단위)\" } . Return (반환값) . - 데이터 Tag의 정보 . { \"MSG\": \"\", \"DATA\": [ [ { \"TAG\": \"Tag1\", \"VALUE\": \"10.0\", \"TIMESTAMP\": \"2024-01-01T00:00:00.000Z\", \"RESULT\": \"Ok\" }, { \"TAG\": \"Tag1\", \"VALUE\": \"11.0\", \"TIMESTAMP\": \"2024-01-02T00:00:00.000Z\", \"RESULT\": \"Ok\" }, { \"TAG\": \"Tag1\", \"TIMESTAMP\": \"2024-01-03T00:00:00.000Z\", \"RESULT\": \"Fail\" } ] ], \"RESULT\": \"Ok\" } . Remark (주의사항) . - 각 시간마다 데이터가 없는 시간은 Fail, 있는 시간은 Ok로 RESULT에 표시 . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/device/GetMultiTagHistory . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TAGS\" : [\"Tag1\"], \"START_TIME\" : \"2024-01-01T00:00:00.000Z\", \"END_TIME\" : \"2024-01-07T12:00:00.000Z\", \"DURATION\" : 86400000 } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetMultiTagHistory/#getmultitaghistoryparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetMultiTagHistory/#getmultitaghistoryparam1"
-  },"209": {
+  },"212": {
     "doc": "GetMultiTagHistory",
     "title": "GetMultiTagHistory",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetMultiTagHistory/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetMultiTagHistory/"
-  },"210": {
+  },"213": {
     "doc": "GetNodeByID",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetNodeByID/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetNodeByID/#lua-api"
-  },"211": {
+  },"214": {
     "doc": "GetNodeByID",
     "title": "GetNodeByID(Param1)",
     "content": "- 기존에 생성되어있는 객체 중 입력받은 ID와 같은 ID를 가진 객체를 가져옵니다. Parameter (인자) . - Param1 : 객체 ID . Return (반환값) . - 타입에 따른 객체 - 객체를 가져오는데 실패하였을 경우 0을 반환 . Remark (주의사항) . - 함수 실행 위치에서 접근 가능한 객체만 가져올 수 있습니다. - 예를 들어, use객체 외부에서 use객체 내부의 객체에 대해서 접근할 수 없습니다. - Trend의 component를 가져오려면 TrendID.ComponentID의 형태로 가져옵니다. 사용예시 . function _onclick() local getNode = GetNodeByID(\"ID_RECT\") getNode.width = 333 end function _onclick() local getComponent = GetNodeByID(\"ID_TREND.Legend\") getComponent.width = 200 end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetNodeByID/#getnodebyidparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetNodeByID/#getnodebyidparam1"
-  },"212": {
+  },"215": {
     "doc": "GetNodeByID",
     "title": "GetNodeByID",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetNodeByID/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetNodeByID/"
-  },"213": {
+  },"216": {
     "doc": "GetObjectsAtPosition",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetObjectsAtPosition/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetObjectsAtPosition/#lua-api"
-  },"214": {
+  },"217": {
     "doc": "GetObjectsAtPosition",
     "title": "GetObjectsAtPosition(Param1, Param2)",
     "content": "- 입력받은 좌표에 존재하는 모든 객체를 가져옵니다. Parameter (인자) . - Param1 : local x좌표 - Param2 : local y좌표 . Return (반환값) . - table . Remark (주의사항) . - none . 사용예시 . function _onclick() local newTable = GetObjectsAtPosition(GetLocalCursorPosX(), GetLocalCursorPosY()) for k,v in pairs(newTable) do log(k..\" = \"..v.id) end end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetObjectsAtPosition/#getobjectsatpositionparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetObjectsAtPosition/#getobjectsatpositionparam1-param2"
-  },"215": {
+  },"218": {
     "doc": "GetObjectsAtPosition",
     "title": "GetObjectsAtPosition",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetObjectsAtPosition/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetObjectsAtPosition/"
-  },"216": {
+  },"219": {
     "doc": "GetSQLiteTableList",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetSQLiteTableList/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetSQLiteTableList/#lua-api"
-  },"217": {
+  },"220": {
     "doc": "GetSQLiteTableList",
     "title": "GetSQLiteTableList(Param1)",
     "content": "- enuSpace Meta 서버의 프로젝트의 저장된 SQLite파일의 테이블리스트를 조회하는 함수 . Parameter (인자) . - Param1 : SQLite filename (path정보를 포함한 filename) . Return (반환값) . - 정상적인 경우 서버측 프로젝트 내에 존재하는 파일명을 입력했을때 정상적으로 반환된 json포맷 예시 . { \"Result\" : \"OK\", \"Msg\" : \"Success TableList.\", \"Data\" : [ { \"content\" : \"COMPANY\", \"type\" : \"Table\" } { \"content\" : \"COMPANY2\", \"type\" : \"Table\" } ] } . Remark (주의사항) . - 비정상적인 경우 서버측 프로젝트 내에 존재하지 않는 파일명을 입력했을때 비정상적으로 반환된 json포맷 예시 . { \"Result\" : \"FAIL\", \"Msg\" : \"Could not find db file.\" } . Example (함수사용 예시) . function _onclick() local data = GetSQLiteTableList(\"test1.db\") local jsondcode = Json.decode(data) if (jsondcode.Result == \"OK\") then for i=1, #jsondcode.Data do content = jsondcode.Data[i].content PrintMessage(content) end else -- jsondcode.Result == \"FAIL\" PrintMessage(jsondcode.Msg) end end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetSQLiteTableList/#getsqlitetablelistparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetSQLiteTableList/#getsqlitetablelistparam1"
-  },"218": {
+  },"221": {
     "doc": "GetSQLiteTableList",
     "title": "GetSQLiteTableList",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetSQLiteTableList/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/GetSQLiteTableList/"
-  },"219": {
+  },"222": {
     "doc": "GetTableInfo",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTableInfo/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTableInfo/#server-api"
-  },"220": {
+  },"223": {
     "doc": "GetTableInfo",
     "title": "GetTableInfo(Param1)",
     "content": "- Param1의 API KEY와 상응하는 테이블 1개의 정보를 반환합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\" } . Return (반환값) . - 데이터 Tag의 정보 . { \"DATA\": { \"DB_TABLE_NAME\": \"테이블명\", \"DB_TYPE\": \"Postgresql\", \"DEVICE_API_KEY\": \"ApiKey\", \"DESCRIPTION\": \"\", \"CREATED_TIME\": \"\" }, \"MSG\": \"\", \"RESULT\": \"Ok\" } . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/Device/GetTableInfo . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\" } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTableInfo/#gettableinfoparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTableInfo/#gettableinfoparam1"
-  },"221": {
+  },"224": {
     "doc": "GetTableInfo",
     "title": "GetTableInfo",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTableInfo/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTableInfo/"
-  },"222": {
+  },"225": {
     "doc": "GetTagHistory",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagHistory/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagHistory/#lua-api"
-  },"223": {
+  },"226": {
     "doc": "GetTagHistory",
     "title": "GetTagHistory(DB Table Name, Tag Name, Start Time, End Time, Interval)",
     "content": "- DAQ(데이터취득)시스템으로부터 히스토리 데이터를 요청하는 함수입니다. Parameter (인자) . | Name | Type | Description | Default | . | DB Table Name | string | DB Table 이름 |   | . | Tag Name | string | Tag 이름 |   | . | Start Time | string | 데이터 취득 시작 날짜 |   | . | End Time | string | 데이터 취득 끝 날짜 |   | . | Duration | int | 데이터 취득 주기 (밀리세컨드 단위) |   | . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Msg\" : \"\", \"Data\": [ { \"TAG\": \"TAG\", \"TIMESTAMP\" : \"2024-04-01T15:40:00\", \"RESULT\" : \"Fail\" }, { \"TAG\": \"TAG\", \"TIMESTAMP\" : \"2024-04-02T15:41:40\", \"RESULT\" : \"Ok\", \"VALUE\":\"123\" }, { \"TAG\": \"TAG\", \"TIMESTAMP\" : \"2024-04-02T15:43:20\", \"RESULT\" : \"Ok\", \"VALUE\":\"456\" }, ... ], \"RESULT\":\"Ok\" } ``` . Remark (주의사항) . - 장기간의 데이터를 너무 짧은 Duration으로 요청 시 거절될 수 있음 - TIMESTAMP에 해당하는 데이터가 없을 시 RESULT:Fail, VALUE는 없음 . Example (함수사용 예시) . function _onclick() local data = GetTagHistory('TABLE','TAG','2024-04-01T15:40:00Z','2024-04-07T15:45:00Z', 100000) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagHistory/#gettaghistorydb-table-name-tag-name-start-time-end-time-interval",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagHistory/#gettaghistorydb-table-name-tag-name-start-time-end-time-interval"
-  },"224": {
+  },"227": {
     "doc": "GetTagHistory",
     "title": "GetTagHistory",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagHistory/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagHistory/"
-  },"225": {
+  },"228": {
     "doc": "GetTagValue",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValue/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValue/#lua-api"
-  },"226": {
+  },"229": {
     "doc": "GetTagValue",
     "title": "GetTagValue(DB Table Name,Tag1,Tag2,…)",
     "content": "- DAQ(데이터취득)시스템으로부터 데이터를 요청하는 함수입니다. Parameter (인자) . | Name | Type | Description | Default | :—: | :—: | :— | :—: | DB Table Name | string | DB Table 이름 | | Tag Name | string | Tag 이름 | | Tag Name2 | string | Tag 이름 | … . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"Bla ~bla~\", \"Data\": { \"Table\" : \"테이블명1\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } { \"Table\" : \"테이블명2\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } } ``` . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() ID_bnl4p1.text = GetTagValue(\"table\",\"tag1\",\"tag2\",\"tag3\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValue/#gettagvaluedb-table-nametag1tag2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValue/#gettagvaluedb-table-nametag1tag2"
-  },"227": {
+  },"230": {
     "doc": "GetTagValue",
     "title": "GetTagValue",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValue/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValue/"
-  },"228": {
-    "doc": "GetTagValues",
-    "title": "Lua API",
-    "content": " ",
-    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api",
-    
-    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api"
-  },"229": {
-    "doc": "GetTagValues",
-    "title": "GetTagValues(DB Table Name,Tag Array)",
-    "content": "- DAQ(데이터취득)시스템으로부터 데이터를 요청하는 함수입니다. Parameter (인자) . | Name | Type | Description | Default | . | DB Table Name | string | DB Table 이름 |   | . | Tag Array | string Array | Tag 이름 |   | . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"Bla ~bla~\", \"Data\": { \"Table\" : \"테이블명1\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } { \"Table\" : \"테이블명2\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } } ``` . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() local data = {\"tag1\", \"tag2\", \"tag3\"} ID_TEXT.text = GetTagValues(\"table\",data) end . ",
-    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesdb-table-nametag-array",
-    
-    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesdb-table-nametag-array"
-  },"230": {
-    "doc": "GetTagValues",
-    "title": "GetTagValues",
-    "content": " ",
-    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/",
-    
-    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
   },"231": {
     "doc": "GetTagValues",
     "title": "Server API",
@@ -1637,986 +1637,993 @@
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
   },"234": {
+    "doc": "GetTagValues",
+    "title": "Lua API",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#lua-api"
+  },"235": {
+    "doc": "GetTagValues",
+    "title": "GetTagValues(DB Table Name,Tag Array)",
+    "content": "- DAQ(데이터취득)시스템으로부터 데이터를 요청하는 함수입니다. Parameter (인자) . | Name | Type | Description | Default | . | DB Table Name | string | DB Table 이름 |   | . | Tag Array | string Array | Tag 이름 |   | . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"Bla ~bla~\", \"Data\": { \"Table\" : \"테이블명1\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } { \"Table\" : \"테이블명2\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값1\", \"TimeStamp\":\"2023.04.23:34:00:00\" \"Result\":\"OK\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"N/A\", \"TimeStamp\" : \"2023.04.23:34:00:00\" \"Result\" : \"FAIL\" } ] } } ``` . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() local data = {\"tag1\", \"tag2\", \"tag3\"} ID_TEXT.text = GetTagValues(\"table\",data) end . ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesdb-table-nametag-array",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/#gettagvaluesdb-table-nametag-array"
+  },"236": {
+    "doc": "GetTagValues",
+    "title": "GetTagValues",
+    "content": " ",
+    "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/",
+    
+    "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/GetTagValues/"
+  },"237": {
     "doc": "GetTopObjectAtPosition",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetTopObjectAtPosition/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetTopObjectAtPosition/#lua-api"
-  },"235": {
+  },"238": {
     "doc": "GetTopObjectAtPosition",
     "title": "GetTopObjectAtPosition(Param1, Param2)",
     "content": "- 입력받은 좌표에 존재하는 객체 중 가장 상단에 위치한 객체를 가져옵니다. Parameter (인자) . - Param1 : local x좌표 - Param2 : local y좌표 . Return (반환값) . - Object . Remark (주의사항) . - 해당 위치에 객체가 존재하지 않는 경우 nil이 반환됩니다. 사용예시 . function _onclick() local v = GetTopObjectAtPosition(GetLocalCursorPosX(), GetLocalCursorPosY()) log(v.id) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetTopObjectAtPosition/#gettopobjectatpositionparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetTopObjectAtPosition/#gettopobjectatpositionparam1-param2"
-  },"236": {
+  },"239": {
     "doc": "GetTopObjectAtPosition",
     "title": "GetTopObjectAtPosition",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetTopObjectAtPosition/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/GetTopObjectAtPosition/"
-  },"237": {
+  },"240": {
     "doc": "HttpRequest",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequest/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequest/#lua-api"
-  },"238": {
+  },"241": {
     "doc": "HttpRequest",
     "title": "HttpRequest(Param1, Param2, Param3, Param4)",
     "content": "- 외부서버에 Http 프로토콜을 이용하여 데이터를 요청합니다. Parameter (인자) . - Param1 : URL address - Param2 : GET or POST - Param3 : body - Param4 : encode (ASCII / ANSI / EUC-KR / CP949 / UTF-8 / UNICODE) . Return (반환값) . - 요청 결과의 문자열 데이터 . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() ID_TEXT.text = HttpRequest(\"https://finance.naver.com/item/main.naver?code=093230\", \"GET\", \"\", \"EUC-KR\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequest/#httprequestparam1-param2-param3-param4",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequest/#httprequestparam1-param2-param3-param4"
-  },"239": {
+  },"242": {
     "doc": "HttpRequest",
     "title": "HttpRequest",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequest/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequest/"
-  },"240": {
+  },"243": {
     "doc": "HttpRequestGet",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestGet/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestGet/#lua-api"
-  },"241": {
+  },"244": {
     "doc": "HttpRequestGet",
     "title": "HttpRequestGet(Param1)",
     "content": "- 외부서버에 Http 프로토콜을 이용하여 데이터를 요청합니다. (WASM Call) . Parameter (인자) . - Param1 : URL address . Return (반환값) . - 요청 결과의 문자열 데이터 . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() ID_TEXT.text = HttpRequestGet(\"https://finance.naver.com/item/main.naver?code=005930\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestGet/#httprequestgetparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestGet/#httprequestgetparam1"
-  },"242": {
+  },"245": {
     "doc": "HttpRequestGet",
     "title": "HttpRequestGet",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestGet/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestGet/"
-  },"243": {
+  },"246": {
     "doc": "HttpRequestPost",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPost/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPost/#lua-api"
-  },"244": {
+  },"247": {
     "doc": "HttpRequestPost",
     "title": "HttpRequestPost(Param1, Param2)",
     "content": "- 외부서버에 Http 프로토콜을 이용하여 데이터를 요청합니다. (WASM Call) . Parameter (인자) . - Param1 : URL address - Param2 : Body . Return (반환값) . - 요청 결과의 문자열 데이터 . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() local data = [[{\"URL\": \"user contents\"}]] ID_bn4HNB.text = HttpRequestPost(\"https://localhost:7031/Example/PostDataExample\", data) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPost/#httprequestpostparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPost/#httprequestpostparam1-param2"
-  },"245": {
+  },"248": {
     "doc": "HttpRequestPost",
     "title": "HttpRequestPost",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPost/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPost/"
-  },"246": {
+  },"249": {
     "doc": "HttpRequestPostAsync",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPostAsync/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPostAsync/#lua-api"
-  },"247": {
+  },"250": {
     "doc": "HttpRequestPostAsync",
     "title": "HttpRequestPostAsync(Param1, Param2, Param3)",
     "content": "- 외부서버에 Http 프로토콜을 이용하여 데이터를 비동기 요청합니다. (WASM Call) . Parameter (인자) . - Param1 : URL address - Param2 : Body - Param3 : Callback function name . Return (반환값) . - none . Remark (주의사항) . - callback으로 실행시켜 줄 함수는 HttpRequestPostAsync 함수가 실행된 객체에 존재해야 함 - callback 함수는 비동기 요청 후 응답 메세지를 받을 파라미터가 필요함에 따라 파라미터를 하나만 사용해야 함 . Example (함수사용 예시) . function _onclick() local data = [[{\"URL\": \"user contents\"}]] HttpRequestPostAsync(\"https://localhost:7031/Example/PostDataExample\", data, \"_userfunction\") end function _userfunction(msg) jsondcode = Json.decode(msg) dimsi = jsondcode.shape.dims[1] PrintMessage(tostring(dimsi)) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPostAsync/#httprequestpostasyncparam1-param2-param3",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPostAsync/#httprequestpostasyncparam1-param2-param3"
-  },"248": {
+  },"251": {
     "doc": "HttpRequestPostAsync",
     "title": "HttpRequestPostAsync",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPostAsync/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPostAsync/"
-  },"249": {
+  },"252": {
     "doc": "InsertSQLite",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/InsertSQLite/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/InsertSQLite/#lua-api"
-  },"250": {
+  },"253": {
     "doc": "InsertSQLite",
     "title": "InsertSQLite(Param1, Param2)",
     "content": "- enuSpace Meta 서버의 프로젝트의 저장된 SQLite파일의 데이터를 삽입하는 함수 . Parameter (인자) . - Param1 : SQLite filename (path정보를 포함한 filename) - Param2 : SQLite query . Return (반환값) . - 정상적인 경우 서버측 프로젝트 내에 존재하는 파일명을 입력하고 insert쿼리를 제대로 입력했을 경우 정상적으로 반환된 json포맷 예시 . { \"Result\" : \"OK\", \"Msg\" : \"Success Insert.\" } . Remark (주의사항) . - 비정상적인 경우 1. 서버측 프로젝트 내에 존재하지 않는 파일명을 입력했을 경우 2. 쿼리를 잘못 입력했을 경우 비정상적으로 반환된 json포맷 예시 . 1. { \"Result\" : \"FAIL\", \"Msg\" : \"Could not find db file.\" } 2. { \"Result\" : \"FAIL\", \"Msg\" : \"error message.\" } . - 쿼리가 정상적으로 실행될 경우 데이터베이스 파일이 변환되기 때문에 새로고침이 됩니다. Example (함수사용 예시) . function _onclick() local data = InsertSQLite(\"test1.db\", \"INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (5, 'Paul', 32, 'California', 20000.00 );\") local jsondcode = Json.decode(data) if(jsondcode.Result == \"OK\") then PrintMessage(jsondcode.Msg) else -- jsondcode.Result == \"FAIL\" PrintMessage(jsondcode.Msg) end end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/InsertSQLite/#insertsqliteparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/InsertSQLite/#insertsqliteparam1-param2"
-  },"251": {
+  },"254": {
     "doc": "InsertSQLite",
     "title": "InsertSQLite",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/InsertSQLite/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/InsertSQLite/"
-  },"252": {
+  },"255": {
     "doc": "Intersect",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/Intersect/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/Intersect/#lua-api"
-  },"253": {
+  },"256": {
     "doc": "Intersect",
     "title": "Intersect(Param1, Param2)",
     "content": "- 입력받은 두 개의 객체 ID에 해당하는 객체를 찾아 해당 객체들의 경계선이 교차하는지 확인합니다. Parameter (인자) . - Param1 : 객체 ID - Param2 : 객체 ID . Return (반환값) . - Bool . Remark (주의사항) . - 입력받은 ID에 해당하는 객체는 함수 실행 위치에서 접근 가능한 객체일 경우에만 가져올 수 있습니다. use객체 외부에서 use객체 내부의 객체에 대해서 접근할 수 없습니다. - Trend의 component를 가져오려면 TrendID.ComponentID의 형태로 가져옵니다. 사용예시 . function _onclick() local isIntersect = Intersect(\"ID_RECT\", \"ID_CIRCLE\") log(tostring(isIntersect)) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/Intersect/#intersectparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/Intersect/#intersectparam1-param2"
-  },"254": {
+  },"257": {
     "doc": "Intersect",
     "title": "Intersect",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/Intersect/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/Intersect/"
-  },"255": {
+  },"258": {
     "doc": "Navigation",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/Navigation/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/Navigation/#lua-api"
-  },"256": {
+  },"259": {
     "doc": "Navigation",
     "title": "Navagation(Param1, …)",
     "content": "- 메타버스 모드에서 아바타를 다른 화면으로 이동하기 위한 함수 - 가변인자 설정에 따라 해당 화면에서 아바타가 최초 생성될 위치를 지정할 수 있음 . Parameter (인자) . - Param1 : 픽쳐 이름 - Param2 : 가변 인자 ( 0 ~ 2개) . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . -- 해당 함수를 발생시킨 객체의 위치와 동일하게 Test픽쳐에서 생성 -- ex) Navagation함수를 translate(100,100)인 객체가 실행을 시켰을 경우, Test픽쳐에의 100, 100 좌표에 아바타가 생성 function _onclick() Navagation(\"picture\\\\Test.svg\") end -- Test픽쳐의 id가 \"ID_RECT\"인 객체의 위치에 아바타가 생성 function _onclick() Navagation(\"picture\\\\Test.svg\", \"ID_RECT\") end -- Test픽쳐의 1920, 1080 좌표에 아바타가 생성 function _onclick() Navagation(\"picture\\\\Test.svg\", 1920, 1080) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/Navigation/#navagationparam1-",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/Navigation/#navagationparam1-"
-  },"257": {
+  },"260": {
     "doc": "Navigation",
     "title": "Navigation",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/Navigation/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.6%20%EB%A9%94%ED%83%80%EB%B2%84%EC%8A%A4%20%EC%A0%9C%EC%96%B4%20API/Navigation/"
-  },"258": {
+  },"261": {
     "doc": "PlayAudio",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PlayAudio/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PlayAudio/#lua-api"
-  },"259": {
+  },"262": {
     "doc": "PlayAudio",
     "title": "PlayAudio(Param1, Param2)",
     "content": "- param2에 위치한 오디오파일을 1회 재생합니다. Parameter (인자) . - Param1 : 오디오 재생 ID - Param2 : 오디오 파일 경로 . Return (반환값) . - none . Remark (주의사항) . - Param1을 통해 설정한 오디오 재생 ID는 StopAudio API를 통해 재생 도중 재생을 중지할 수 있습니다. 사용예시 . function _onclick() PlayAudio(\"Play_1\", \"/resource/sample.mp3\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PlayAudio/#playaudioparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PlayAudio/#playaudioparam1-param2"
-  },"260": {
+  },"263": {
     "doc": "PlayAudio",
     "title": "PlayAudio",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PlayAudio/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PlayAudio/"
-  },"261": {
+  },"264": {
     "doc": "PopupTable",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/PopupTable/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/PopupTable/#lua-api"
-  },"262": {
+  },"265": {
     "doc": "PopupTable",
     "title": "PopupTable(Data)",
     "content": "- 데이터를 정해진 형식으로 전달하여 테이블을 띄웁니다. Parameter (인자) . | Name | Type | Description | Default | . | Data | string | 테이블로 가시화 할 데이터 |   | . Return (반환값) . 팝업창에 테이블을 가시화합니다. Remark (주의사항) . - ### Example (함수사용 예시) . function _onclick() local data = GetTagHistory('DB TABLE','TAG','2024-03-14T15:40:00Z','2024-03-14T15:45:00Z', 1000) local decoded_data = Json.decode(data) local json_data = decoded_data.DATA local json_string = Json.encode(json_data) PopupTable(json_string) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/PopupTable/#popuptabledata",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/PopupTable/#popuptabledata"
-  },"263": {
+  },"266": {
     "doc": "PopupTable",
     "title": "PopupTable",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/PopupTable/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/PopupTable/"
-  },"264": {
+  },"267": {
     "doc": "PrintMessage",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PrintMessage/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PrintMessage/#lua-api"
-  },"265": {
+  },"268": {
     "doc": "PrintMessage",
     "title": "PrintMessage(Param1)",
     "content": "- log창에 메세지 출력문을 제공하는 함수입니다. Parameter (인자) . - Param1 : 출력 문자열 . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() local data = string.format(\"%d개 입니다.\", 5) PrintMessage(data) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PrintMessage/#printmessageparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PrintMessage/#printmessageparam1"
-  },"266": {
+  },"269": {
     "doc": "PrintMessage",
     "title": "PrintMessage",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PrintMessage/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PrintMessage/"
-  },"267": {
+  },"270": {
     "doc": "QueryToChatbot",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/QueryToChatbot/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/QueryToChatbot/#lua-api"
-  },"268": {
+  },"271": {
     "doc": "QueryToChatbot",
     "title": "QueryToChatbot(Param1, Param2, Param3, param4)",
     "content": "- 지정한 챗봇에 질의합니다. Parameter (인자) . - Param1 : 챗봇 ID - Param2 : 질의 내용 - Param3 : callback 함수명 - Param4 : chunk 값 반환 여부 (bool) . Return (반환값) . - none . Remark (주의사항) . - callback 함수는 QueryToChatbot 함수를 실행한 객체에 존재해야합니다. - callback 함수의 인자는 하나여야 합니다. 해당 인자로 쿼리 질의 내용이 삽입되어 함수가 실행됩니다. - param4 : false일 경우 답변 내용 전체를 반환합니다. - param4 : true일 경우 chunk를 각각 반환합니다. Example (함수사용 예시) . function _onclick() QueryToChatbot(\"CHAT_01\", \"안녕하세요, 선생님\", \"QueryCallback\", false) end -- callback 함수 function QueryCallback(msg) print(msg) -- msg에 chunk단위로 질의내용이 전달 end -- 출력결과 : 만나서 반갑소. 궁금한 것이 있으면 언제든지 물어보시오. 도움이 될 수 있도록 최선을 다하겠소 . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/QueryToChatbot/#querytochatbotparam1-param2-param3-param4",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/QueryToChatbot/#querytochatbotparam1-param2-param3-param4"
-  },"269": {
+  },"272": {
     "doc": "QueryToChatbot",
     "title": "QueryToChatbot",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/QueryToChatbot/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/QueryToChatbot/"
-  },"270": {
+  },"273": {
     "doc": "RegistFunction",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/RegistFunction/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/RegistFunction/#lua-api"
-  },"271": {
+  },"274": {
     "doc": "RegistFunction",
     "title": "RegistFunction(Param1, Param2, Param3)",
     "content": "- 객체에 함수를 등록합니다. Parameter (인자) . - Param1 : 함수 명 - Param2 : 함수 내용 - Param3 : 객체 또는 객체 ID . Return (반환값) . - none . Remark (주의사항) . - 입력받은 ID에 해당하는 객체는 함수 실행 위치에서 접근 가능한 객체일 경우에만 가져올 수 있습니다. use객체 외부에서 use객체 내부의 객체에 대해서 접근할 수 없습니다. - Trend의 component를 가져오려면 TrendID.ComponentID의 형태로 가져옵니다. 사용예시 . function _onclick() --TODO Add your lua script code here RegistFunction(\"_onload\", \"function _onload()\\nwidth = width + 100\\nend\", \"ID_RECT\"); end function _onclick() --TODO Add your lua script code here RegistFunction(\"_onload\", \"function _onload()\\nwidth = width + 100\\nend\", ID_RECT); end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/RegistFunction/#registfunctionparam1-param2-param3",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/RegistFunction/#registfunctionparam1-param2-param3"
-  },"272": {
+  },"275": {
     "doc": "RegistFunction",
     "title": "RegistFunction",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/RegistFunction/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/RegistFunction/"
-  },"273": {
+  },"276": {
     "doc": "ResetFocus",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/ResetFocus/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/ResetFocus/#lua-api"
-  },"274": {
+  },"277": {
     "doc": "ResetFocus",
     "title": "ResetFocus()",
     "content": "- 실행 시, Focus상태일 경우 zoom-in 되었던 화면을 원래 상태로 zoom-out 합니다. Parameter (인자) . - none . Return (반환값) . - none . Remark (주의사항) . - 현재 Focus 상태일 경우에만 작동합니다. 사용예시 . function _onclick() ResetFocus() end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/ResetFocus/#resetfocus",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/ResetFocus/#resetfocus"
-  },"275": {
+  },"278": {
     "doc": "ResetFocus",
     "title": "ResetFocus",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/ResetFocus/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/ResetFocus/"
-  },"276": {
+  },"279": {
     "doc": "SelectSQLite",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/SelectSQLite/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/SelectSQLite/#lua-api"
-  },"277": {
+  },"280": {
     "doc": "SelectSQLite",
     "title": "SelectSQLite(Param1, Param2)",
     "content": "- enuSpace Meta 서버의 프로젝트의 저장된 SQLite파일의 데이터를 조회하는 함수 . Parameter (인자) . - Param1 : SQLite filename (path정보를 포함한 filename) - Param2 : SQLite query . Return (반환값) . - 정상적인 경우 서버측 프로젝트 내에 존재하는 파일명을 입력하고 update쿼리를 제대로 입력했을때 정상적으로 반환된 json포맷 예시 . { \"Result\" : \"OK\", \"Msg\" : \"Success Select.\", \"Data\" : [ { \"ADDRESS\" : \"California\", \"AGE\" : \"32\", \"ID\" : \"1\", \"NAME\" : \"Paul\", \"SALARY\" : \"30000.0\" }, { \"ADDRESS\" : \"Texas\", \"AGE\" : \"25\", \"ID\" : \"2\", \"NAME\" : \"Allen\", \"SALARY\" : \"15000.0\" } ] } . Remark (주의사항) . - 비정상적인 경우 1. 서버측 프로젝트 내에 존재하지 않는 파일명을 입력했을때 2. 쿼리를 잘못 입력했을때 비정상적으로 반환된 json포맷 예시 . 1. { \"Result\" : \"FAIL\", \"Msg\" : \"Could not find db file.\" } 2. { \"Result\" : \"FAIL\", \"Msg\" : \"error message.\" } . Example (함수사용 예시) . function _onclick() local data = SelectSQLite(\"test1.db\", \"SELECT * FROM COMPANY\") local jsondcode = Json.decode(data) if (jsondcode.Result == \"OK\") then for i=1, #jsondcode.Data do name = jsondcode.Data[i].NAME age = jsondcode.Data[i].AGE address = jsondcode.Data[i].ADDRESS salary = jsondcode.Data[i].SALARY PrintMessage(name) end else -- jsondcode.Result == \"FAIL\" PrintMessage(jsondcode.Msg) end end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/SelectSQLite/#selectsqliteparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/SelectSQLite/#selectsqliteparam1-param2"
-  },"278": {
+  },"281": {
     "doc": "SelectSQLite",
     "title": "SelectSQLite",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/SelectSQLite/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/SelectSQLite/"
-  },"279": {
+  },"282": {
     "doc": "SendBackward",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendBackward/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendBackward/#lua-api"
-  },"280": {
+  },"283": {
     "doc": "SendBackward",
     "title": "SendBackward(Param1, Param2, …, ParamN)",
     "content": "- 입력받은 ID에 해당하는 객체들의 z축 위치를 한 칸 뒤로 조정합니다. Parameter (인자) . - Param1 : string 객체 ID 1 - Param2 : string 객체 ID 2 - Param3 : string 객체 ID 3 - ... - ParamN : string 객체 ID N . Remark (주의사항) . - 함수 실행 위치에서 접근 가능한 그래픽 객체만 조정할 수 있습니다. 사용예시 . function _onclick() SendBackward(\"ID_RECT1\", \"ID_CIRCLE\", \"ID_RECT2\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendBackward/#sendbackwardparam1-param2--paramn",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendBackward/#sendbackwardparam1-param2--paramn"
-  },"281": {
+  },"284": {
     "doc": "SendBackward",
     "title": "SendBackward",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendBackward/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendBackward/"
-  },"282": {
+  },"285": {
     "doc": "SendToBack",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendToBack/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendToBack/#lua-api"
-  },"283": {
+  },"286": {
     "doc": "SendToBack",
     "title": "SendToBack(Param1, Param2, …, ParamN)",
     "content": "- 입력받은 ID에 해당하는 객체들의 z축 위치를 맨 뒤로 조정합니다. Parameter (인자) . - Param1 : string 객체 ID 1 - Param2 : string 객체 ID 2 - Param3 : string 객체 ID 3 - ... - ParamN : string 객체 ID N . Remark (주의사항) . - 함수 실행 위치에서 접근 가능한 그래픽 객체만 조정할 수 있습니다. 사용예시 . function _onclick() SendToBack(\"ID_RECT1\", \"ID_CIRCLE\", \"ID_RECT2\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendToBack/#sendtobackparam1-param2--paramn",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendToBack/#sendtobackparam1-param2--paramn"
-  },"284": {
+  },"287": {
     "doc": "SendToBack",
     "title": "SendToBack",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendToBack/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SendToBack/"
-  },"285": {
+  },"288": {
     "doc": "SetGlobalValue",
     "title": "WASM API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValue/#wasm-api",
     
     "relUrl": "/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValue/#wasm-api"
-  },"286": {
+  },"289": {
     "doc": "SetGlobalValue",
     "title": "SetGlobalValue(Param1)",
     "content": "- global 전역변수에 등록된 변수에 값을 할당하는 함수입니다. Parameter (인자) . - Param1 : 테이블 명 - Param2 : 태그명 - Param3 : 태그 값 . Return (반환값) . - . Remark (주의사항) . - WASM Module 함수인 SetGlobalValue(Table, Tag, Value)를 아래의 형태와 같이 js에서 호출하기위한 함수로 선언하여 사용하여야 함. (g_enuSpace : 모듈객체) . Example (함수사용 예시) . //선언 function User_SetGlobalValue(Table, Tag, Value) { g_enuSpace.SetGlobalValue(Table, Tag, Value); } //사용 function Call_ExternalFunctionJS(strJson) { // 사용자 정의 로직 추가. User_SetGlobalValue(\"TABLE\", \"C24CM_POS\", \"140\"); } . ",
     "url": "/enuspaceMeta_doc/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValue/#setglobalvalueparam1",
     
     "relUrl": "/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValue/#setglobalvalueparam1"
-  },"287": {
+  },"290": {
     "doc": "SetGlobalValue",
     "title": "SetGlobalValue",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValue/",
     
     "relUrl": "/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValue/"
-  },"288": {
+  },"291": {
     "doc": "SetGlobalValues",
     "title": "WASM API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValues/#wasm-api",
     
     "relUrl": "/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValues/#wasm-api"
-  },"289": {
+  },"292": {
     "doc": "SetGlobalValues",
     "title": "SetGlobalValues(Param1)",
     "content": "- global 전역변수에 등록된 변수리스트에 값을 할당하는 함수입니다. Parameter (인자) . - Param1 : Json 파일포맷 . [ { \"Table\" : \"테이블명1\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"값\" }, ] }, { \"Table\" : \"테이블명2\", \"Data\" : [ { \"TagName\" : \"태그이름1\", \"Value\" : \"값\" }, { \"TagName\" : \"태그이름2\", \"Value\" : \"값\" }, ] } ] . Return (반환값) . - . Remark (주의사항) . - WASM Module 함수인 SetGlobalValues(Json)를 아래의 형태와 같이 js에서 호출하기위한 함수로 선언하여 사용하여야 함. (g_enuSpace : 모듈객체) 사용 시 주의사항 : 여러 Table과 여러 Tag를 한번에 값 할당을 할 수 있게 하기위해 배열 처리한 것 주의. Example (함수사용 예시) . //선언 function User_SetGlobalValues(Json){ g_enuSpace.SetGlobalValues(Json); } //사용 function Call_ExternalFunctionJS(strJson) { // 예시 1 User_SetGlobalValues(\"[{Table: \"TABLE1\", Data: [{TagName: \"C27CM_POS\", Value:\"123\"}]}]\"} // 예시 2 User_SetGlobalValues(\"[{Table: \"TABLE1\", Data: [{TagName: \"C54CM_POS”, Value:”12”},{TagName: \"C60CM_POS\", Value:\"34\"}]}, {Table: \"TABLE2\", Data: [{TagName: \"C63CM_POS\", Value:\"56\"},{TagName: \"C8CM_POS\", Value:\"78\"}]}]\"} } . ",
     "url": "/enuspaceMeta_doc/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValues/#setglobalvaluesparam1",
     
     "relUrl": "/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValues/#setglobalvaluesparam1"
-  },"290": {
+  },"293": {
     "doc": "SetGlobalValues",
     "title": "SetGlobalValues",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValues/",
     
     "relUrl": "/docs/4.%20Meta%20%EC%97%94%EC%A7%84%20%EC%97%B0%EB%8F%99%20API/SetGlobalValues/"
-  },"291": {
+  },"294": {
     "doc": "SetPointerCapture",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SetPointerCapture/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SetPointerCapture/#lua-api"
-  },"292": {
+  },"295": {
     "doc": "SetPointerCapture",
     "title": "SetPointerCapture()",
     "content": "- 함수를 실행한 객체를 이벤트 캡처 대상으로 지정합니다. 후속 이벤트는 캡처가 해제될 때 까지(mouseup 이벤트) 캡처 요소를 대상으로 합니다. Parameter (인자) . - none . Return (반환값) . - none . Remark (주의사항) . - mouseup 이벤트 이후 캡처가 해제됩니다. 사용예시 . function _onmousedown() SetPointerCapture() bIsMouseDown = true; end function _onmousemove() if(bIsMouseDown) then translate_x = GetLocalCursorPosX() end end function _onmouseup() bIsMouseDown = false end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SetPointerCapture/#setpointercapture",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SetPointerCapture/#setpointercapture"
-  },"293": {
+  },"296": {
     "doc": "SetPointerCapture",
     "title": "SetPointerCapture",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SetPointerCapture/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/SetPointerCapture/"
-  },"294": {
+  },"297": {
     "doc": "SetTagValue",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValue/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValue/#lua-api"
-  },"295": {
+  },"298": {
     "doc": "SetTagValue",
     "title": "SetTagValue(DB Table Name,Tag1,Value1,Tag2,Value2,…)",
     "content": "- DAQ(데이터취득)시스템에 데이터를 적재하는 함수입니다. Parameter (인자) . | Name | Type | Description | Default | :—: | :—: | :— | :—: | DB Table Name | string | DB Table 이름 | | Tag Name | string | Tag 이름 | | Value | string, int, double | Tag 값 | | Tag Name2 | string | Tag 이름 | | Value2 | string, int, double | Tag 값 | … . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"Bla ~bla~\", } ``` . Remark (주의사항) . - SetTagValue 사용시 ParamN 과 ParamN+1은 Pair로 동작하며, ParamN은 string, ParamN+1은 string, int, double을 받을 수 있다. Example (함수사용 예시) . function _onclick() ID_TEXT.text = SetTagValue(\"TableName\", \"Tag1\", \"Value1\", \"Tag2\", 3) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValue/#settagvaluedb-table-nametag1value1tag2value2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValue/#settagvaluedb-table-nametag1value1tag2value2"
-  },"296": {
+  },"299": {
     "doc": "SetTagValue",
     "title": "SetTagValue",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValue/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValue/"
-  },"297": {
+  },"300": {
     "doc": "SetTagValues",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#lua-api"
-  },"298": {
+  },"301": {
     "doc": "SetTagValues",
     "title": "SetTagValue(DB Table Name,Lua Array)",
     "content": "- DAQ(데이터취득)시스템에 데이터를 적재하는 함수입니다. Parameter (인자) . | Name | Type | Description | Default | . | DB Table Name | string | DB Table 이름 |   | . | Tag Array | Key,Value Array | Tag, Value |   | . Return (반환값) . - 데이터 Tag의 정보 ```Json { \"Result\" : \"OK\", \"Msg\" : \"Bla ~bla~\", } ``` . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() local data = {[\"key1\"] = 123, [\"key2\"] = \"value2\", [\"key3\"] = \"value3\"} ID_TEXT.text = SetTagValues(\"TableName\", data) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#settagvaluedb-table-namelua-array",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#settagvaluedb-table-namelua-array"
-  },"299": {
+  },"302": {
     "doc": "SetTagValues",
     "title": "SetTagValues",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/"
-  },"300": {
+  },"303": {
     "doc": "SetTagValues",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#server-api"
-  },"301": {
+  },"304": {
     "doc": "SetTagValues",
     "title": "SetTagValues(Param1)",
     "content": "- 현재 시간으로 태그에 값을 추가합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\", \"TAGS_AND_VALUE\" :[ { \"TAG\" : \"태그1\", \"VALUE\" : \"10.0\" }, { \"TAG\" : \"태그2\", \"VALUE\" : \"12\" } ], \"USE_VARIABLE_NAME\":\"태그 변수명 사용여부 (true 또는 false, 기본값 : false)\" } . Return (반환값) . - 성공 . { \"MSG\":\"Tag values are set to druid\", \"RESULT\":\"Ok\" } . - 데이터 조작 실패 ```json { \"MSG\":\"DBHandle,CannotFindTable\", \"RESULT\":\"Fail\" } { \"MSG\":\"DBHandle, ... \", \"RESULT\":\"Fail\" } ``` . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/Device/SetTagValues . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TAGS_AND_VALUE\":[ { \"TAG\":\"LED_1\", \"VALUE\":\"1\" }, { \"TAG\":\"TEMP_1\", \"VALUE\":\"40.8\" } ], \"USE_VARIABLE_NAME\": false } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#settagvaluesparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/#settagvaluesparam1"
-  },"302": {
+  },"305": {
     "doc": "SetTagValues",
     "title": "SetTagValues",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/SetTagValues/"
-  },"303": {
+  },"306": {
     "doc": "SetTaskviewCycle",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SetTaskviewCycle/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SetTaskviewCycle/#lua-api"
-  },"304": {
+  },"307": {
     "doc": "SetTaskviewCycle",
     "title": "SetTaskviewCycle(Param1)",
     "content": "- Lua Event인 OnTaskview event의 초당 수행 횟수를 설정합니다. Parameter (인자) . - Param1 : 초당 수행 횟수 . Return (반환값) . - none . Remark (주의사항) . - 기본값은 24이며, 최소값은 1, 최대값은 24입니다. - Param이 1보다 작을 경우 1, 24보다 클 경우 24로 설정됩니다. - 주어진 환경에 따라, 현재 task가 느릴 경우 설정한 수행 횟수보다 느릴 수 있습니다. Example (함수사용 예시) . function _onclick() SetTaskviewCycle(12) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SetTaskviewCycle/#settaskviewcycleparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SetTaskviewCycle/#settaskviewcycleparam1"
-  },"305": {
+  },"308": {
     "doc": "SetTaskviewCycle",
     "title": "SetTaskviewCycle",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SetTaskviewCycle/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SetTaskviewCycle/"
-  },"306": {
+  },"309": {
     "doc": "ShowCalendar",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowCalendar/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowCalendar/#lua-api"
-  },"307": {
+  },"310": {
     "doc": "ShowCalendar",
     "title": "ShowCalendar(Param1, Param2, Param3)",
     "content": "- 마우스를 클릭한 위치 아래에 상호작용 가능한 Calendar를 표시합니다. Parameter (인자) . - Param1 : CalendarType - 표시할 달력의 종류를 설정합니다. - Single : 날짜를 하루 선택할 수 있습니다. - Range : 시작 날짜와 끝 날짜를 각각 선택할 수 있습니다. - Param2 : TimeUnit - 표시할 시간의 최소 단위를 설정합니다. - Day 또는 Second - Param3 : CallBack . Return (반환값) . - none . Remark (주의사항) . - CallBack 함수는 한개의 인자만 사용해야 합니다. - CallBack 함수가 받는 인자의 형식은 다음과 같습니다. ```json [ \"2001-01-01 00:00:00\", \"2001-12-31 11:59:59\" ] ``` . Example (함수사용 예시) . function _onclick() ShowCalendar(\"Single\", \"Day\", \"CallbackCalendar\") end function CallbackCalendar(msg) json = Json.decode(msg) time1 = json[1] time2 = json[2] end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowCalendar/#showcalendarparam1-param2-param3",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowCalendar/#showcalendarparam1-param2-param3"
-  },"308": {
+  },"311": {
     "doc": "ShowCalendar",
     "title": "ShowCalendar",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowCalendar/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowCalendar/"
-  },"309": {
+  },"312": {
     "doc": "ShowDocument",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowDocument/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowDocument/#lua-api"
-  },"310": {
+  },"313": {
     "doc": "ShowDocument",
     "title": "ShowDocument( documentPath, [option] )",
     "content": ". | 문서 파일을 Modal창에 호출하는 함수입니다. | . Parameter (인자) . | Name | Type | Description | Default | . | documentPath | string | path 정보 |   | . | [option] | string | Next, Prev 둘중 하나를 입력하면 페이지가 해당 옵션에 따라 변환 |   | . | [option] | int | 페이지 넘버로 해당 페이지로 이동 |   | . Return (반환값) . none . Remark (주의사항) . 현) PDF 파일만 지원 . Example (함수사용 예시) . -- 기본형 function _onclick() ShowDocument(\"document/발표.pdf\") end -- 페이지 넘버 입력 function _onclick() ShowDocument(\"document/발표.pdf\", 3) end -- \"Next\" 키워드 사용 function _onclick() ShowDocument(\"document/발표.pdf\", 'Next') end -- \"Prev\" 키워드 사용 function _onclick() ShowDocument(\"document/발표.pdf\", 'Prev') end . Related Link . | ShowMarkdown() : MarkDown 파일을 읽어와 표시하는 함수 | ShowWebpage() : Web page 주소를 읽어 iframe을 통해 화면을 호출하는 함수 | . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowDocument/#showdocument-documentpath-option-",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowDocument/#showdocument-documentpath-option-"
-  },"311": {
+  },"314": {
     "doc": "ShowDocument",
     "title": "ShowDocument",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowDocument/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowDocument/"
-  },"312": {
+  },"315": {
     "doc": "ShowMarkdown",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowMarkdown/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowMarkdown/#lua-api"
-  },"313": {
+  },"316": {
     "doc": "ShowMarkdown",
     "title": "ShowMarkdown(Param1)",
     "content": "- MarkDown 파일을 읽어와 표시하는 함수입니다. Parameter (인자) . - Param1 : path . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() ShowMarkdown(\"document/document.md\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowMarkdown/#showmarkdownparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowMarkdown/#showmarkdownparam1"
-  },"314": {
+  },"317": {
     "doc": "ShowMarkdown",
     "title": "ShowMarkdown",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowMarkdown/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowMarkdown/"
-  },"315": {
+  },"318": {
     "doc": "ShowWebpage",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpage/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpage/#lua-api"
-  },"316": {
+  },"319": {
     "doc": "ShowWebpage",
     "title": "ShowWebpage(Param1)",
     "content": "- Web page 주소를 읽어 iframe을 통해 화면을 호출하는 함수입니다. Parameter (인자) . - Param1 : path . Return (반환값) . - none . Remark (주의사항) . - iframe 사용을 차단한 Web page는 호출할 수 없습니다. Example (함수사용 예시) . function _onclick() ShowWebpage(\"https://www.youtube.com/embed/4dwpcSRX-1s\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpage/#showwebpageparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpage/#showwebpageparam1"
-  },"317": {
+  },"320": {
     "doc": "ShowWebpage",
     "title": "ShowWebpage",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpage/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpage/"
-  },"318": {
+  },"321": {
     "doc": "ShowWebpagePopup",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpagePopup/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpagePopup/#lua-api"
-  },"319": {
+  },"322": {
     "doc": "ShowWebpagePopup",
     "title": "ShowWebpagePopup(Param1)",
     "content": "- Web page 주소를 읽어 새로운 창에 화면을 호출하는 함수입니다. Parameter (인자) . - Param1 : path . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() ShowWebpagePopup(\"https://www.youtube.com/embed/4dwpcSRX-1s\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpagePopup/#showwebpagepopupparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpagePopup/#showwebpagepopupparam1"
-  },"320": {
+  },"323": {
     "doc": "ShowWebpagePopup",
     "title": "ShowWebpagePopup",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpagePopup/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpagePopup/"
-  },"321": {
+  },"324": {
     "doc": "SpeechToTextEnd",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextEnd/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextEnd/#lua-api"
-  },"322": {
+  },"325": {
     "doc": "SpeechToTextEnd",
     "title": "SpeechToTextEnd(Param1)",
     "content": "- SpeechToTextStart 함수를 통해 시작한 녹음을 종료한 후 녹음된 음성을 text로 변환하여 반환합니다.. Parameter (인자) . - Param1 : 챗봇 ID . Return (반환값) . - none . Remark (주의사항) . - SpeechToTextStart에서 지정한 callback 함수에 음성 변환 텍스트가 전송됩니다. Example (함수사용 예시) . function _onclick() SpeechToTextEnd(\"STT_01\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextEnd/#speechtotextendparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextEnd/#speechtotextendparam1"
-  },"323": {
+  },"326": {
     "doc": "SpeechToTextEnd",
     "title": "SpeechToTextEnd",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextEnd/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextEnd/"
-  },"324": {
+  },"327": {
     "doc": "SpeechToTextStart",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextStart/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextStart/#lua-api"
-  },"325": {
+  },"328": {
     "doc": "SpeechToTextStart",
     "title": "SpeechToTextStart(Param1, Param2, Param3)",
     "content": "- 음성을 텍스트로 변환하기 위한 녹음을 시작합니다. Parameter (인자) . - Param1 : 녹음 고유 번호 - Param2 : 언어(Kor, Eng, Jpn, Chn) - Param3 : callback 함수명 . Return (반환값) . - none . Remark (주의사항) . - callback 함수는 SpeechToTextStart 함수를 실행한 객체에 존재해야합니다. - callback 함수의 인자는 하나여야 합니다. 해당 인자로 텍스트로 변환됨 음성 내용이 삽입되어 함수가 실행됩니다. - SpeechToTextStart 함수를 통해 녹음을 시작한 경우, SpeechToTextEnd 함수를 통해 녹음 고유 번호에 해당하는 녹음을 종료한 이후 callback 함수로 음성 변환 text가 전송됩니다. Example (함수사용 예시) . function _onclick() SpeechToTextStart(\"STT_01\", \"Kor\", \"STTCallback\") end -- callback 함수 function STTCallback(msg) log(msg) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextStart/#speechtotextstartparam1-param2-param3",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextStart/#speechtotextstartparam1-param2-param3"
-  },"326": {
+  },"329": {
     "doc": "SpeechToTextStart",
     "title": "SpeechToTextStart",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextStart/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextStart/"
-  },"327": {
+  },"330": {
     "doc": "StopAudio",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopAudio/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopAudio/#lua-api"
-  },"328": {
+  },"331": {
     "doc": "StopAudio",
     "title": "StopAudio(Param1)",
     "content": "- PlayAudio API를 통해 재생된 Audio 파일을 재생 도중에 중지합니다. Parameter (인자) . - Param1 : PlayAudio API 호출 시 부여한 오디오 재생 ID . Return (반환값) . - none . Remark (주의사항) . - none . 사용예시 . function _onclick() StopAudio(\"Play_1\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopAudio/#stopaudioparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopAudio/#stopaudioparam1"
-  },"329": {
+  },"332": {
     "doc": "StopAudio",
     "title": "StopAudio",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopAudio/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopAudio/"
-  },"330": {
+  },"333": {
     "doc": "StopTextToSpeech",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopTextToSpeech/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopTextToSpeech/#lua-api"
-  },"331": {
+  },"334": {
     "doc": "StopTextToSpeech",
     "title": "StopTextToSpeech(Param1)",
     "content": "- TextToSpeech API를 통해 재생되는 음성을 중지합니다. Parameter (인자) . - Param1 : TextToSpeech API 호출 시 부여한 ID . Return (반환값) . - none . Remark (주의사항) . - none . Example (함수사용 예시) . function _onclick() StopTextToSpeech(\"TTS_01\") end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopTextToSpeech/#stoptexttospeechparam1",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopTextToSpeech/#stoptexttospeechparam1"
-  },"332": {
+  },"335": {
     "doc": "StopTextToSpeech",
     "title": "StopTextToSpeech",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopTextToSpeech/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopTextToSpeech/"
-  },"333": {
+  },"336": {
     "doc": "TextToSpeech",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/TextToSpeech/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/TextToSpeech/#lua-api"
-  },"334": {
+  },"337": {
     "doc": "TextToSpeech",
     "title": "TextToSpeech(Param1, Param2, Param3, Param4, Param5, param6)",
     "content": "- 지정한 옵션을 통해 텍스트를 음성으로 재생합니다. Parameter (인자) . - Param1 : TTS 고유 ID - Param2 : 음성 명 (https://api.ncloud-docs.com/docs/ai-naver-clovavoice-ttspremium#%EC%9D%8C%EC%84%B1%ED%95%A9%EC%84%B1%EB%AA%A9%EC%86%8C%EB%A6%AC%EB%AA%A9%EB%A1%9D) - Param3 : 음성으로 변환할 문자 - Param4 : 소리 크기(-5 ~ 5) - Param5 : 재생 속도(-5 ~ 5) - Param6 : 음성 높낮이(-5 ~ 5) . Return (반환값) . - none . Remark (주의사항) . - Param1로 부여하는 TTS 고유 ID는 StopTextToSpeech API를 호출할 때 사용하며, 해당 TTS를 재생 중 중지시킬 수 있습니다. Example (함수사용 예시) . function _onclick() TextToSpeech(\"TTS_01\", \"mijin\", \"안녕하세요. 이엔유주식회사입니다.\", 0, 0, 0) end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/TextToSpeech/#texttospeechparam1-param2-param3-param4-param5-param6",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/TextToSpeech/#texttospeechparam1-param2-param3-param4-param5-param6"
-  },"335": {
+  },"338": {
     "doc": "TextToSpeech",
     "title": "TextToSpeech",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/TextToSpeech/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/TextToSpeech/"
-  },"336": {
+  },"339": {
     "doc": "UpdateSQLite",
     "title": "Lua API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/UpdateSQLite/#lua-api",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/UpdateSQLite/#lua-api"
-  },"337": {
+  },"340": {
     "doc": "UpdateSQLite",
     "title": "UpdateSQLite(Param1, Param2)",
     "content": "- enuSpace Meta 서버의 프로젝트의 저장된 SQLite파일의 데이터를 수정하는 함수 . Parameter (인자) . - Param1 : SQLite filename (path정보를 포함한 filename) - Param2 : SQLite query . Return (반환값) . - 정상적인 경우 서버측 프로젝트 내에 존재하는 파일명을 입력하고 update쿼리를 제대로 입력했을때 정상적으로 반환된 json포맷 예시 . { \"Result\" : \"OK\", \"Msg\" : \"Success Update.\" } . Remark (주의사항) . - 비정상적인 경우 1. 서버측 프로젝트 내에 존재하지 않는 파일명을 입력했을때 2. 쿼리를 잘못 입력했을때 비정상적으로 반환된 json포맷 예시 . 1. { \"Result\" : \"FAIL\", \"Msg\" : \"Could not find db file.\" } 2. { \"Result\" : \"FAIL\", \"Msg\" : \"error message.\" } . - 쿼리가 정상적으로 실행될 경우 데이터베이스 파일이 변환되기 때문에 새로고침이 됩니다. Example (함수사용 예시) . function _onclick() local data = UpdateSQLite(\"test1.db\", \"UPDATE COMPANY SET NAME='sang' WHERE ID=2;\") local jsondcode = Json.decode(data) if(jsondcode.Result == \"OK\") then PrintMessage(jsondcode.Msg) else -- jsondcode.Result == \"FAIL\" PrintMessage(jsondcode.Msg) end end . ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/UpdateSQLite/#updatesqliteparam1-param2",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/UpdateSQLite/#updatesqliteparam1-param2"
-  },"338": {
+  },"341": {
     "doc": "UpdateSQLite",
     "title": "UpdateSQLite",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/UpdateSQLite/",
     
     "relUrl": "/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.4%20SQLite%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20API/UpdateSQLite/"
-  },"339": {
+  },"342": {
     "doc": "UpdateTable",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTable/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTable/#server-api"
-  },"340": {
+  },"343": {
     "doc": "UpdateTable",
     "title": "UpdateTable(Param1)",
     "content": "- 테이블의 여러 속성 값을 변경합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\", \"DATA\" : { \"DB_TABLE_NAME\": \"변경할 테이블명\", \"DESCRIPTION\": \"변경할 DBType\" } } . Return (반환값) . - 데이터 Tag의 정보 . { \"RESULT\" : \"Ok\", \"MSG\" : \"\" } . Remark (주의사항) . - none . Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/device/UpdateTable . { \"API_KEY\":\"APIKEY\", \"DATA\" : { \"DB_TABLE_NAME\": \"TestTable\", \"DESCRIPTION\": \"My Description\" } } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTable/#updatetableparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTable/#updatetableparam1"
-  },"341": {
+  },"344": {
     "doc": "UpdateTable",
     "title": "UpdateTable",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTable/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTable/"
-  },"342": {
+  },"345": {
     "doc": "UpdateTag",
     "title": "Server API",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/#server-api",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/#server-api"
-  },"343": {
+  },"346": {
     "doc": "UpdateTag",
     "title": "UpdateTag(Param1)",
     "content": "- 테이블의 태그 정보를 변경합니다. Protocol / Method . - HTTP/POST - application/json . Parameter (인자) . - Param1 : Json 파일포맷 . { \"API_KEY\":\"ApiKey\", \"TAG\" : \"변경 전 태그명\", \"DATA\" : { \"TAG\" : \"변경할 태그명\", \"DATA_TYPE\": \"변경할 타입\", \"DESCRIPTION\": \"변경할 설명\", \"IO_TYPE\": \"변경할 IOType\" } } . Return (반환값) . - 데이터 Tag의 정보 . { \"RESULT\" : \"Ok\", \"MSG\" : \"\" } . Remark (주의사항) . - TAG, DESCRIPTION, DATA_TYPE, IO_TYPE 해당하는 Attribute를 지원합니다. Example (API 사용 예시) . - HTTP/POST https://enuspace.com/api/DAQ/device/UpdateTag . { \"API_KEY\":\"_3qd1a3hfko5163ceb2ad174vq1u95yz3\", \"TAG\" : \"LED_1\", \"DATA\" : { \"TAG\" : \"Bright_Pin_1\", \"DATA_TYPE\": \"double\", \"DESCRIPTION\": \"bright_pin\", \"IO_TYPE\": \"Input\" } } . ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/#updatetagparam1",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/#updatetagparam1"
-  },"344": {
+  },"347": {
     "doc": "UpdateTag",
     "title": "UpdateTag",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/",
     
     "relUrl": "/docs/5.%20Server%20RESTful%20API/5.1%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%97%B0%EB%8F%99%20API/UpdateTag/"
-  },"345": {
-    "doc": "audio",
-    "title": "Graphics (Audio)",
-    "content": " ",
-    "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/audio/#graphics-audio",
-    
-    "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/audio/#graphics-audio"
-  },"346": {
-    "doc": "audio",
-    "title": "audio",
-    "content": ". 오디오 객체에 대하여 설명합니다. Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000”, “url(#ID_buAIdw_GRAD)” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | rx | float | 객체의 x축 라운드 속성 | value | . | ry | float | 객체의 y축 라운드 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 (현재 미반영) | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Function (함수) . 아래의 테이블의 함수 정보는 스크립트상에서 연계되는 함수 이름과 파라미터 정보입니다. | Function | parameter | Return | Description | . | PlayAudio | void | void | 오디오 실행 | . | StopAudio | void | void | 오디오 정지 | . | PauseAudio | void | void | 오디오 일시 정지 | . | ControlAudio | float | void | 오디오 재생 위치 조정 (0~1) | . | ControlVolume | float | void | 오디오 볼륨 크기 조정 (0~1) | . | GetStatus | void | int | 오디오 상태 조회 (0 : 오디오 할당 실패, 1: 오디오 정지, 2: 오디오 재생 중) | . | GetDuration | void | float | 할당된 오디오 전체 재생 시간 조회 | . | GetCurrentTime | void | float | 할당된 오디오 현재 재생 시간 조회 | . | GetVolume | void | float | 오디오 현재 볼륨 크기 조회 (0~1) | . Lua Script (함수사용 예시) . function _onmousedown() --TODO Add your lua script code here rx = rx + 1 end . function _onmousedown() --TODO Add your lua script code here ID_AUDIO.rx = ID_AUDIO.rx + 1 end . function _onmousedown() --TODO Add your lua script code here ID_AUDIO.PlayAudio() ID_AUDIO.PauseAudio() -- 재생 위치를 전체의 0.5부분으로 이동 ID_AUDIO.ControlAudio(0.5) -- 음량 0.5로 조정 ID_AUDIO.ControlVolume(0.5) -- 55.45 ID_AUDIO.GetDuration() end . ",
-    "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/audio/",
-    
-    "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/audio/"
-  },"347": {
+  },"348": {
     "doc": "circle",
     "title": "Graphics (Circle)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/circle/#graphics-circle",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/circle/#graphics-circle"
-  },"348": {
+  },"349": {
     "doc": "circle",
     "title": "circle",
     "content": ". 원 객체에 대하여 설명합니다. enuSpace는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_circle.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | use_text | bool | 텍스트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | cx | float | 객체의 센터 x위치 속성 | value | . | cy | float | 객체의 센터 y위치 속성 | value | . | r | float | 객체의 반지름 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onmousedown() --TODO Add your lua script code here r = r + 1 end . function _onmousedown() --TODO Add your lua script code here ID_CIRCLE.r = ID_CIRCLE.r + 1 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/circle/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/circle/"
-  },"349": {
+  },"350": {
     "doc": "editbox",
     "title": "Graphics (Editbox)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/editbox/#graphics-editbox",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/editbox/#graphics-editbox"
-  },"350": {
+  },"351": {
     "doc": "editbox",
     "title": "editbox",
     "content": ". 에디트박스 객체에 대하여 설명합니다. Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 0~1 |   | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | font_family | string | 폰트 이름 속성 | “arial”… | . | font_size | float | 폰트 사이즈 속성 | value | . | font_style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | font_weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | text_color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#00000” | . | disabled | bool | 비활성화 속성 | true, false | . | multiline | bool | 다중 라인 속성 | true, false | . | password | bool | 패스워드 속성 | true, false | . | read_only | bool | 읽기전용 속성 | true, false | . | want_return | bool | 엔터 속성 | true, false | . | text_align | string | 텍스트 정렬 속성 | “left”, “center”, “right” | . | border | bool | 외곽선 속성 | true, false | . | number | bool | 숫자 입력 속성 | true, false | . | lowercase | bool | 소문자 속성 | true, false | . | uppercase | bool | 대문자 속성 | true, false | . | static_edge | bool | edge 디스플레이 속성 | true, false | . | auto_scroll | bool | 자동 스크롤 속성 | true, false | . | horizontal_scroll | bool | 수평 스크롤 속성 | true, false | . | vertical_scroll | bool | 수직 스크롤 속성 | true, false | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . Lua Script (함수사용 예시) . function _onmousedown() --TODO Add your lua script code here text = \"mouse click\" width = width + 10 end . function _onmousedown() --TODO Add your lua script code here ID_EDIT.font_style = \"normal\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/editbox/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/editbox/"
-  },"351": {
+  },"352": {
     "doc": "ellipse",
     "title": "Graphics (Ellipse)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/ellipse/#graphics-ellipse",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/ellipse/#graphics-ellipse"
-  },"352": {
+  },"353": {
     "doc": "ellipse",
     "title": "ellipse",
     "content": ". 타원 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_ellipse.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | use_text | bool | 텍스트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | cx | float | 객체의 센터 x위치 속성 | value | . | cy | float | 객체의 센터 y위치 속성 | value | . | rx | float | 객체의 x축 반지름 속성 | value | . | ry | float | 객체의 y축 반지름 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() rx = rx + 1 end . function _onclick() ID_ELLIPSE.rx = ID_ELLIPSE.rx + 1 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/ellipse/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/ellipse/"
-  },"353": {
+  },"354": {
     "doc": "gradient",
     "title": "Graphics (Gradient)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#graphics-gradient",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#graphics-gradient"
-  },"354": {
+  },"355": {
     "doc": "gradient",
     "title": "Linear gradient",
     "content": "객체에 gradient 색상을 제공합니다. 현재 gradient 색상이 지원되는 객체는 rect, circle, ellipse, path, polygon 총 5가지 객체 입니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_grad_linear.asp . gradient 색상이 지원되는 객체의 fill 속성 왼쪽의 아이콘을 클릭해서 gradient가 적용된 fill 속성을 사용할 수 있습니다. ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient"
-  },"355": {
+  },"356": {
     "doc": "gradient",
     "title": "Linear Gradient",
     "content": ". Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() ID_RECT.gradient.gradient_type = \"linearGradient\" ID_RECT.gradient.stop_count = 2 ID_RECT.gradient.x1 = 0 ID_RECT.gradient.y1 = 50 ID_RECT.gradient.x2 = 100 ID_RECT.gradient.y2 = 50 ID_RECT.gradient.stop1.offset = 20 ID_RECT.gradient.stop2.offset = 60 ID_RECT.gradient.stop1.stop_color = 20 ID_RECT.gradient.stop2.stop_color = 60 ID_RECT.gradient.stop1.stop_opacity = 0.8 ID_RECT.gradient.stop2.stop_opacity = 0.2 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient-1",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#linear-gradient-1"
-  },"356": {
+  },"357": {
     "doc": "gradient",
     "title": "Radial Gradient",
     "content": ". Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() ID_RECT.gradient.gradient_type = \"radialGradient\" ID_RECT.gradient.cx = 50 ID_RECT.gradient.cy = 50 ID_RECT.gradient.fx = 20 ID_RECT.gradient.fy = 20 ID_RECT.gradient.r = 50 ID_RECT.gradient.stop_count = 2 ID_RECT.gradient.stop1.offset = 20 ID_RECT.gradient.stop2.offset = 60 ID_RECT.gradient.stop1.stop_color = 20 ID_RECT.gradient.stop2.stop_color = 60 ID_RECT.gradient.stop1.stop_opacity = 0.8 ID_RECT.gradient.stop2.stop_opacity = 0.2 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#radial-gradient",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/#radial-gradient"
-  },"357": {
+  },"358": {
     "doc": "gradient",
     "title": "gradient",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/gradient/"
-  },"358": {
+  },"359": {
     "doc": "image",
     "title": "Graphics (Image)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/image/#graphics-image",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/image/#graphics-image"
-  },"359": {
+  },"360": {
     "doc": "image",
     "title": "image",
     "content": ". 이미지 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_image.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 | value 라운드 | . | href | string | 객체의 파일 패스 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . Lua Script (함수사용 예시) . function _onclick() href = \"\\\\resource\\\\jupiter_logo.png\" end . function _onclick() href = \"data:image/png;base64,iVBORw0KGgoAAAA...\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/image/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/image/"
-  },"360": {
+  },"361": {
     "doc": "Home",
     "title": "enuSpaceMeta Manual",
     "content": " ",
     "url": "/enuspaceMeta_doc/#enuspacemeta-manual",
     
     "relUrl": "/#enuspacemeta-manual"
-  },"361": {
+  },"362": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/enuspaceMeta_doc/",
     
     "relUrl": "/"
-  },"362": {
+  },"363": {
     "doc": "line",
     "title": "Graphics (Line)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/line/#graphics-line",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/line/#graphics-line"
-  },"363": {
+  },"364": {
     "doc": "line",
     "title": "line",
     "content": ". 라인 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_line.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value |   | . | visibility | bool | 객체의 visibility 속성 | true, false |   | . | lock | bool | 객체의 잠금 속성 | true, false |   | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 |   | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” |   | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” |   | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” |   | . | x1 | float | 라인 시작 x좌표 | value |   | . | y1 | float | 라인 시작 y좌표 | value |   | . | x2 | float | 라인 끝 x좌표 | value |   | . | y2 | float | 라인 끝 y좌표 | value |   | . | translate_x | float | 객체의 x축 이동 | value |   | . | translate_y | float | 객체의 y축 이동 | value |   | . | scale_x | float | 객체의 x 스케일 | value |   | . | scale_y | float | 객체의 y 스케일 | value |   | . | center_x | float | 객체의 x 센터 설정 | value |   | . | center_y | float | 객체의 y 센터 설정 | value |   | . | &lt;!– | pg_begin_arrow_type | string | 확장 : 시작화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” | . | pg_begin_arrow_size | float | 확장 : 시작 화살표의 사이즈 속성 | value |   | . | pg_begin_arraow_span | string | 확장 : 시작 화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” |   | . | pg_end_arrow_type | string | 확장 : 끝화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” |   | . | pg_end_arrow_size | float | 확장 : 끝화살표의 사이즈 속성 | value |   | . | pg_begin_arrow_span | string | 확장 : 끝화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” –&gt; |   | . gradient - true (optional) . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() y1 = y1 + 1 x1 = 100 end . function _onclick() ID_LINE.y1 = ID_LINE.y1 + 1 ID_LINE.x1 = 100 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/line/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/line/"
-  },"364": {
+  },"365": {
     "doc": "path",
     "title": "Graphics (Path)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/path/#graphics-path",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/path/#graphics-path"
-  },"365": {
+  },"366": {
     "doc": "path",
     "title": "path",
     "content": ". 패스 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_path.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | use_text | bool | 텍스트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | d | string | 객체의 패스 정보 속성 | “M48.5000,48.5000 L0.0000,48.5000 A48.5000,48.5000 0 1,0 48.5000,0.0000 Z” | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() d = \"M0,0 L100,0 L100,100 Z\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/path/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/path/"
-  },"366": {
+  },"367": {
     "doc": "pdf document",
     "title": "pdf document",
     "content": " ",
     "url": "/enuspaceMeta_doc/pdf/",
     
     "relUrl": "/pdf/"
-  },"367": {
+  },"368": {
     "doc": "polygon",
     "title": "Graphics (Polygon)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polygon/#graphics-polygon",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polygon/#graphics-polygon"
-  },"368": {
+  },"369": {
     "doc": "polygon",
     "title": "polygon",
     "content": ". 폴리곤 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_polygon.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value |   | . | visibility | bool | 객체의 visibility 속성 | true, false |   | . | lock | bool | 객체의 잠금 속성 | true, false |   | . | gradient | bool | 그라디언트 설정 속성 | true, false |   | . | use_text | bool | 텍스트 설정 속성 | true, false |   | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 |   | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 |   | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” |   | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” |   | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” |   | . | points | string | 폴리곤 좌표 리스트 | “0,100 10,200 20,400” |   | . | translate_x | float | 객체의 x축 이동 | value |   | . | translate_y | float | 객체의 y축 이동 | value |   | . | scale_x | float | 객체의 x 스케일 | value |   | . | scale_y | float | 객체의 y 스케일 | value |   | . | center_x | float | 객체의 x 센터 설정 | value |   | . | center_y | float | 객체의 y 센터 설정 | value |   | . | &lt;!– | pg_begin_arrow_type | string | 확장 : 시작화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” | . | pg_begin_arrow_size | float | 확장 : 시작 화살표의 사이즈 속성 | value |   | . | pg_begin_arraow_span | string | 확장 : 시작 화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” |   | . | pg_end_arrow_type | string | 확장 : 끝화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” |   | . | pg_end_arrow_size | float | 확장 : 끝화살표의 사이즈 속성 | value |   | . | pg_begin_arrow_span | string | 확장 : 끝화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” –&gt; |   | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() points = \"0,100 10,200 110,169\" end . function _onclick() ID_POLYLINE.points = \"0,100 10,200 110,169\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polygon/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polygon/"
-  },"369": {
+  },"370": {
     "doc": "polyline",
     "title": "Graphics (Polyline)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polyline/#graphics-polyline",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polyline/#graphics-polyline"
-  },"370": {
+  },"371": {
     "doc": "polyline",
     "title": "polyline",
     "content": ". 폴리라인 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_polyline.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value |   | . | visibility | bool | 객체의 visibility 속성 | true, false |   | . | lock | bool | 객체의 잠금 속성 | true, false |   | . | gradient | bool | 그라디언트 설정 속성 | true, false |   | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 |   | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” |   | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 |   | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” |   | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” |   | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” |   | . | points | string | 폴리라인 좌표 리스트 | “0,100 10,200 20,400” |   | . | translate_x | float | 객체의 x축 이동 | value |   | . | translate_y | float | 객체의 y축 이동 | value |   | . | scale_x | float | 객체의 x 스케일 | value |   | . | scale_y | float | 객체의 y 스케일 | value |   | . | center_x | float | 객체의 x 센터 설정 | value |   | . | center_y | float | 객체의 y 센터 설정 | value |   | . | &lt;!– | pg_begin_arrow_type | string | 확장 : 시작화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” | . | pg_begin_arrow_size | float | 확장 : 시작 화살표의 사이즈 속성 | value |   | . | pg_begin_arraow_span | string | 확장 : 시작 화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” |   | . | pg_end_arrow_type | string | 확장 : 끝화살표 모양 속성 | “none”, “arrow”, “line arrow”, “stealth arrow”, “diamond”, “circle” |   | . | pg_end_arrow_size | float | 확장 : 끝화살표의 사이즈 속성 | value |   | . | pg_begin_arrow_span | string | 확장 : 끝화살표의 크기 속성 | “small1”, “small2”, “small3”, “medium1”, “medium2”, “medium3”, “large1”, “large2”, large3” –&gt; |   | . Lua Script (함수사용 예시) . function _onclick() points = \"0,100 10,200 110,169\" end . function _onclick() ID_POLYLINE.points = \"0,100 10,200 110,169\" end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polyline/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/polyline/"
-  },"371": {
+  },"372": {
     "doc": "rect",
     "title": "Graphics (Rect)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect/#graphics-rect",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect/#graphics-rect"
-  },"372": {
+  },"373": {
     "doc": "rect",
     "title": "rect",
     "content": ". 사각형 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_rect.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | use_text | bool | 텍스트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | stroke_linecap | string | 객체의 linecap의 속성 | “butt”, “round”, “square” | . | stroke_linejoin | string | 객체의 linejoin의 속성 | “miter”, “round”, “bevel” | . | stroke_dasharray | string | 객체의 dasharray의 속성 | “1 1 1” | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | rx | float | 객체의 x축 라운드 속성 | value | . | ry | float | 객체의 y축 라운드 속성 | value | . | width | float | 객체의 넓이 속성 | value | . | height | float | 객체의 높이 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . text - true (optional) . | Property | Type | Description | Value | . | font-family | string | 폰트 이름 속성 | “arial”… | . | font-size | float | 폰트 사이즈 속성 | value | . | font-weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | font-style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | text-color | string | 텍스트 색상 속성 | “rgb(0,0,0)”, “#000000” | . | text-color-opacity | float | 텍스트 투명도 속성 | 0~1 | . | horizontal-align | string | 수평 정렬 속성 | “left”, “center”, “right” | . | vertical-align | string | 수직 정렬 속성 | “top”, “middle”, “bottom” | . gradient - true (optional) . Linear Gradient . https://www.w3schools.com/graphics/svg_grad_linear.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | x1 | float | 그라디언트 x1값 | value | . | y1 | float | 그라디언트 y1값 | value | . | x2 | float | 그라디언트 x2값 | value | . | y2 | float | 그라디언트 y2값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Radial Gradient . https://www.w3schools.com/graphics/svg_grad_radial.asp . | Property | Type | Description | Value | . | gradient_type | string | 그라디언트 타입 속성 | “linearGradient”, “radialGradient” | . | stop_count | int | 그라디언트 색상 개수 | value | . | cx | float | 그라디언트 cx값 | value | . | cy | float | 그라디언트 cy값 | value | . | fx | float | 그라디언트 fx값 | value | . | fy | float | 그라디언트 fy값 | value | . | r | float | 그라디언트 r값 | value | . | stop1 |   |   |   | . | stop_color | string | 그라디언트 색상 | “rgb(0,0,0)”, “#000000” | . | offset | float | 그라디언트 위치 값 | value | . | stop_opacity | float | 그라디언트 투명도 | 0~1 | . | stop2 …. |   |   |   | . Lua Script (함수사용 예시) . function _onclick() width = width + 1 end . ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect/",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/rect/"
-  },"373": {
+  },"374": {
     "doc": "text",
     "title": "Graphics (Text)",
     "content": " ",
     "url": "/enuspaceMeta_doc/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/text/#graphics-text",
     
     "relUrl": "/docs/2.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0/2.1%20%EA%B8%B0%EC%B4%88%EA%B0%9D%EC%B2%B4%20%EC%86%8D%EC%84%B1(Primitive%20Object)/text/#graphics-text"
-  },"374": {
+  },"375": {
     "doc": "text",
     "title": "text",
     "content": ". 텍스트 객체를 제공합니다. enuSpaceMeta는 SVG의 포맷을 이용하며, 확장된 속성 정보를 포함하고 있습니다. https://www.w3schools.com/graphics/svg_text.asp . Properties (속성) . 아래의 테이블의 속성정보는 스크립트상에서 연계되는 속성 이름과 데이터 타입정보 입니다. | Property | Type | Description | Value | . | visibility | bool | 객체의 visibility 속성 | true, false | . | lock | bool | 객체의 잠금 속성 | true, false | . | gradient | bool | 그라디언트 설정 속성 | true, false | . | fill | string | 객체의 브러쉬 색상 속성 | “rgb(0,0,0)”, “#000000” | . | fill_opacity | float | 객체의 브러쉬 투명도 속성 | 0~1 | . | stroke | string | 객체의 라인 색상 속성 | “rgb(0,0,0)”, “#000000” | . | stroke_opacity | float | 객체의 라인 투명도 속성 | 0~1 | . | text | string | 텍스트 문자 속성 | “텍스트입니다.” | . | font_family | string | 폰트 이름 속성 | “arial” | . | font_size | float | 폰트 사이즈 속성 | value | . | font_style | string | 폰트 스타일 | “normal”, “italic”, “oblique” | . | font_weight | string | 폰트 볼드 속성 | “normal”, “bold”, “bolder”, “lighter”, “100”, “200”, “300”, “400”, “500”, “600”, “700”, “800”, “900” | . | text_anchor | string | 텍스트 정렬 속성 | “start”, “middle”, “end” | . | baseline_shift | int | 텍스트 베이스라인 속성 | value | . | text_decoration | string | 텍스트 데코레이션 속성 | “none”, “underline”, “line-through” | . | x | float | 객체의 x위치 속성 | value | . | y | float | 객체의 y위치 속성 | value | . | dx | float | 객체의 x위치 옵셋 속성 | value | . | dy | float | 객체의 y위치 옵셋 속성 | value | . | translate_x | float | 객체의 x축 이동 | value | . | translate_y | float | 객체의 y축 이동 | value | . | scale_x | float | 객체의 x 스케일 | value | . | scale_y | float | 객체의 y 스케일 | value | . | center_x | float | 객체의 x 센터 설정 | value | . | center_y | float | 객체의 y 센터 설정 | value | . Lua Script (함수사용 예시) . function _onclick() text = \"mouse click\" end . function _onclick() ID_TEXT.text= \"mouse click\" end . ",

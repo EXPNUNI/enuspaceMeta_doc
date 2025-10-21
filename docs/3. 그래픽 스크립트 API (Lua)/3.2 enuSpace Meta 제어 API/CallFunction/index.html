@@ -15,8 +15,8 @@
   
 
 .site-nav > ul.nav-list:first-child > li > a,
-.site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(2)) > a,
-.site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a {
+.site-nav > ul.nav-list:first-child > li > ul > li > a,
+.site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(3)) > a {
   background-image: none;
 }
 
@@ -25,14 +25,14 @@
   background-image: none;
 }
 
-.site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(2) > a {
+.site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(1) > ul > li:nth-child(3) > a {
   font-weight: 600;
   text-decoration: none;
 }.site-nav > ul.nav-list:first-child > li:nth-child(4) > button svg,
-.site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(2) > button svg {
+.site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(1) > button svg {
   transform: rotate(-90deg);
 }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list,
-.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list > li.nav-list-item:nth-child(2) > ul.nav-list {
+.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list {
   display: block;
 }
   </style>
@@ -57,20 +57,20 @@
 
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>3.2 enuSpace Meta 제어 API | enuSpaceMeta</title>
+<title>CallFunction | enuSpaceMeta</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="3.2 enuSpace Meta 제어 API" />
+<meta property="og:title" content="CallFunction" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="enuSpaceMeta Manual" />
 <meta property="og:description" content="enuSpaceMeta Manual" />
-<link rel="canonical" href="https://github.com/EXPNUNI/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/" />
-<meta property="og:url" content="https://github.com/EXPNUNI/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/" />
+<link rel="canonical" href="https://github.com/EXPNUNI/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/" />
+<meta property="og:url" content="https://github.com/EXPNUNI/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/" />
 <meta property="og:site_name" content="enuSpaceMeta" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="3.2 enuSpace Meta 제어 API" />
+<meta property="twitter:title" content="CallFunction" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"enuSpaceMeta Manual","headline":"3.2 enuSpace Meta 제어 API","url":"https://github.com/EXPNUNI/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"enuSpaceMeta Manual","headline":"CallFunction","url":"https://github.com/EXPNUNI/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/CallFunction/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -459,109 +459,102 @@
   <ol class="breadcrumb-nav-list">
   
     <li class="breadcrumb-nav-list-item"><a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/">3. 그래픽 스크립트 API (Lua)</a></li>
-  <li class="breadcrumb-nav-list-item"><span>3.2 enuSpace Meta 제어 API</span></li>
+    <li class="breadcrumb-nav-list-item"><a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/3.1%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20API/">3.1 그래픽 다루기 API</a></li>
+  <li class="breadcrumb-nav-list-item"><span>CallFunction</span></li>
   </ol>
 </nav>
       <div id="main-content" class="main-content">
         <main>
           
-            <h1 id="enuspace-meta-제어-api">
+            <h1 id="lua-api">
   
   
-    <a href="#enuspace-meta-제어-api" class="anchor-heading" aria-labelledby="enuspace-meta-제어-api"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> enuSpace Meta 제어 API
+    <a href="#lua-api" class="anchor-heading" aria-labelledby="lua-api"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lua API
   
   
 </h1>
-
-          
-
-          
-            <hr>
-<h2 class="text-delta">Table of contents</h2>
+    
+<h2 id="callfunctionparam1-param2-param3-param4-">
+  
+  
+    <a href="#callfunctionparam1-param2-param3-param4-" class="anchor-heading" aria-labelledby="callfunctionparam1-param2-param3-param4-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CallFunction(Param1, Param2, Param3, Param4 …)
+  
+  
+</h2>
+    
 
 <ul>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ChangePicture/">ChangePicture</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ExternalFunctionJS/">ExternalFunctionJS</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequest/">HttpRequest</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestGet/">HttpRequestGet</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPost/">HttpRequestPost</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/HttpRequestPostAsync/">HttpRequestPostAsync</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PlayAudio/">PlayAudio</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/PrintMessage/">PrintMessage</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/QueryToChatbot/">QueryToChatbot</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SetTaskviewCycle/">SetTaskviewCycle</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowCalendar/">ShowCalendar</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowDocument/">ShowDocument</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowMarkdown/">ShowMarkdown</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpage/">ShowWebpage</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/ShowWebpagePopup/">ShowWebpagePopup</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextEnd/">SpeechToTextEnd</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/SpeechToTextStart/">SpeechToTextStart</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopAudio/">StopAudio</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/StopTextToSpeech/">StopTextToSpeech</a>
-  </li>
-
-  <li>
-    <a href="/enuspaceMeta_doc/docs/3.%20%EA%B7%B8%EB%9E%98%ED%94%BD%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20API%20(Lua)/3.2%20enuSpace%20Meta%20%EC%A0%9C%EC%96%B4%20API/TextToSpeech/">TextToSpeech</a>
-  </li>
-
+  <li>특정 위치에 존재하는 함수를 호출합니다.</li>
 </ul>
+
+<p><br /></p>
+<h3 id="parameter-인자">
+  
+  
+    <a href="#parameter-인자" class="anchor-heading" aria-labelledby="parameter-인자"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Parameter (인자)
+  
+  
+</h3>
+    
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Param1 : 픽쳐 이름 ("picture\\Test.svg")
+- Param2 : 객체 ID
+- Param3 : Param2에서 지정한 객체의 실행시킬 함수
+- Param4 : 가변 인자 (Param3의 함수에 전달할 파라미터)
+</code></pre></div></div>
+<h3 id="return-반환값">
+  
+  
+    <a href="#return-반환값" class="anchor-heading" aria-labelledby="return-반환값"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Return (반환값)
+  
+  
+</h3>
+    
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- none
+</code></pre></div></div>
+<h3 id="remark-주의사항">
+  
+  
+    <a href="#remark-주의사항" class="anchor-heading" aria-labelledby="remark-주의사항"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Remark (주의사항)
+  
+  
+</h3>
+    
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Param2는 CallFunction을 실행시킨 객체가 속한 layer의 객체만 선택이 가능함 (다음 케이스 불가능 : use내부 -&gt; use외부 or use외부 -&gt; use내부)
+2. Param1에서 "this"로 사용 했을 경우 CallFunction을 실행하는 픽쳐를 전달 
+3. Param2에서 "this"로 사용 했을 경우 CallFunction을 실행하는 객체를 전달
+4. Param1, Param2를 모두 빈칸으로 두었을 경우 전역으로 선언된 함수에 대해서 사용가능
+</code></pre></div></div>
+<h3 id="example-함수사용-예시">
+  
+  
+    <a href="#example-함수사용-예시" class="anchor-heading" aria-labelledby="example-함수사용-예시"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Example (함수사용 예시)
+  
+  
+</h3>
+    
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- ID_RECT에 선언된 사용자 정의 함수 TestFunc이 아래와 같다고 가정</span>
+	<span class="k">function</span> <span class="nf">TestFunc</span><span class="p">(</span><span class="n">Flag</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">Flag</span> <span class="k">then</span>
+			<span class="n">PrintMessage</span><span class="p">(</span><span class="s2">"True"</span><span class="p">)</span>
+		<span class="k">end</span>
+	<span class="k">end</span>
+
+	<span class="k">function</span> <span class="nf">_onclick</span><span class="p">()</span>
+		<span class="n">CallFunction</span><span class="p">(</span><span class="s2">"picture</span><span class="se">\\</span><span class="s2">Test.svg"</span><span class="p">,</span> <span class="s2">"ID_RECT"</span><span class="p">,</span> <span class="s2">"TestFunc"</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+	<span class="k">end</span>
+
+	<span class="c1">-- 주의사항 4번 예시</span>
+	<span class="k">function</span> <span class="nf">_onclick</span><span class="p">()</span>
+		<span class="n">CallRemoteFunction</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"ShowMarkdown"</span><span class="p">,</span> <span class="s2">"document/document.md"</span><span class="p">)</span>
+	<span class="k">end</span>
+
+</code></pre></div></div>
+
+          
 
           
         </main>
